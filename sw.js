@@ -1,6 +1,6 @@
 // Cercle des Africains — fonctionnement hors connexion
-const CACHE = "cda-v1";
-const FILES = ["./", "./index.html", "./manifest.webmanifest", "./favicon.png",
+const CACHE = "cda-v2";
+const FILES = ["./", "./index.html", "./manifest.webmanifest", "./favicon.png", "./logo.png",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/maskable-192.png",
   "./icons/maskable-512.png", "./icons/apple-touch-icon.png"];
 self.addEventListener("install", e => {
