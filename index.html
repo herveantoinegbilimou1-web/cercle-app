@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14110c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cercle des Africains">
+<title>Cercle des Africains</title>
+<meta name="description" content="Organisation culturelle panafricaine en Fédération de Russie">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Une seule ambiance : charte du Cercle — fond sombre, or, bandes kente. App mobile à onglets en bas. */
+  --bg:#14110c;
+  --surface:#1f1a12;
+  --line:#3a3122;
+  --gold:#d9a521;
+  --gold-soft:#f0cf74;
+  --text:#f4ecdc;
+  --muted:#b5a888;
+  --kente-g:#1f7a4a;
+  --kente-r:#b5321f;
+  --display:"Syne", "Arial Black", system-ui, sans-serif;
+  --body:"Manrope", "Segoe UI", system-ui, sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-soft)}
+:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px;border-radius:6px}
+.app{display:flex;flex-direction:column;min-height:100%;max-width:560px;margin:0 auto;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+.kente{height:10px;background:
+  repeating-linear-gradient(90deg,var(--gold) 0 18px,var(--bg) 18px 22px,var(--kente-g) 22px 34px,var(--bg) 34px 38px,var(--kente-r) 38px 50px,var(--bg) 50px 54px);}
+header.top{padding:calc(18px + env(safe-area-inset-top)) 20px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:44px;height:44px;flex:none}
+.brand-name{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.06em;line-height:1.15;text-transform:uppercase}
+.brand-name span{display:block;color:var(--gold)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--muted);font:600 13px var(--body);padding:7px 12px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--bg)}
+main{flex:1;padding:4px 20px 24px}
+section.view{display:none;flex-direction:column;gap:20px}
+section.view.on{display:flex}
+h1{font-family:var(--display);font-weight:800;font-size:30px;line-height:1.08;text-wrap:balance}
+h1 em{font-style:normal;color:var(--gold)}
+h2{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.2;text-wrap:balance}
+h3{font-size:16px;font-weight:700}
+p.lead{color:var(--muted);font-size:16px;max-width:62ch}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.hero{display:flex;flex-direction:column;gap:14px;padding:22px 0 6px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fact{border-top:2px solid var(--gold);padding-top:10px}
+.fact b{display:block;font-family:var(--display);font-size:20px;font-variant-numeric:tabular-nums}
+.fact small{color:var(--muted);font-size:12.5px;line-height:1.3;display:block}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--bg);font-weight:700;text-decoration:none;border-radius:14px;padding:15px 18px;font-size:16px}
+.cta.ghost{background:none;color:var(--gold-soft);border:1px solid var(--line)}
+.list{display:flex;flex-direction:column;gap:10px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;gap:14px;align-items:flex-start}
+.item .date{flex:none;width:58px;text-align:center;border-right:1px solid var(--line);padding-right:12px}
+.item .date b{display:block;font-family:var(--display);font-size:22px;line-height:1;font-variant-numeric:tabular-nums}
+.item .date small{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.item p{color:var(--muted);font-size:14.5px;margin-top:4px}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:999px;margin-top:8px}
+.pill.past{background:#2b261c;color:var(--muted)}
+.pill.ok{background:rgba(31,122,74,.22);color:#7fd3a6}
+.pill.wip{background:rgba(217,165,33,.18);color:var(--gold-soft)}
+.empty{border:1px dashed var(--line);border-radius:14px;padding:18px;color:var(--muted);font-size:14.5px}
+.swatch{width:10px;align-self:stretch;border-radius:4px;flex:none}
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:10px;list-style:none}
+.steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:14.5px}
+.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--surface);border:1px solid var(--gold);color:var(--gold);font-weight:700;font-size:13px;display:grid;place-items:center}
+.note{font-size:13px;color:var(--muted)}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;background:rgba(20,17,12,.96);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(8px)}
+nav.tabs .in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--muted);font-size:11.5px;font-weight:600;padding:6px 2px;border-radius:10px}
+nav.tabs a svg{width:22px;height:22px}
+nav.tabs a[aria-current="page"]{color:var(--gold)}
+@media (prefers-reduced-motion:no-preference){section.view.on{animation:in .25s ease-out}@keyframes in{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}}
+@media (max-width:380px){h1{font-size:26px}.facts{grid-template-columns:1fr 1fr 1fr}.fact b{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="kente" aria-hidden="true"></div>
+  <header class="top">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" fill="none" stroke="#d9a521" stroke-width="3"/>
+        <circle cx="24" cy="24" r="14" fill="none" stroke="#d9a521" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <path d="M21 13l5 2 2 4-1 4 3 3-1 5-4 6-3-1-1-5-3-4 1-5-2-3z" fill="#d9a521"/>
+      </svg>
+      <div class="brand-name">Cercle des<span>Africains</span></div>
+    </div>
+    <div class="lang" role="group" aria-label="Langue / Язык">
+      <button type="button" id="lang-fr" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" id="lang-ru" data-lang="ru" aria-pressed="false">RU</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ACCUEIL -->
+    <section class="view" id="v-accueil" data-view="accueil">
+      <div class="hero">
+        <div class="eyebrow" data-i18n="home_eyebrow"></div>
+        <h1 data-i18n-html="home_title"></h1>
+        <p class="lead" data-i18n="home_lead"></p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>RF</b><small data-i18n="fact_scope"></small></div>
+        <div class="fact"><b>4</b><small data-i18n="fact_comm"></small></div>
+        <div class="fact"><b>2026</b><small data-i18n="fact_reg"></small></div>
+      </div>
+      <a class="cta" href="https://forms.gle/7RB86eY5LR4GUFF58" target="_blank" rel="noopener" data-i18n="cta_join"></a>
+      <a class="cta ghost" href="#agenda" data-i18n="cta_agenda"></a>
+    </section>
+
+    <!-- AGENDA -->
+    <section class="view" id="v-agenda" data-view="agenda">
+      <div class="eyebrow" data-i18n="agenda_eyebrow"></div>
+      <h2 data-i18n="agenda_title"></h2>
+      <div class="empty" data-i18n="agenda_empty"></div>
+      <h3 data-i18n="agenda_recent"></h3>
+      <div class="list">
+        <div class="item">
+          <div class="date"><b>14</b><small data-i18n="m_nov"></small></div>
+          <div><h3 data-i18n="ev1_t"></h3><p data-i18n="ev1_d"></p><span class="pill past" data-i18n="past"></span></div>
+        </div>
+        <div class="item">
+          <div class="date"><b>31</b><small data-i18n="m_oct"></small></div>
+          <div><h3 data-i18n="ev2_t"></h3><p data-i18n="ev2_d"></p><span class="pill past" data-i18n="past"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANTENNES & COMMISSIONS -->
+    <section class="view" id="v-cercle" data-view="cercle">
+      <div class="eyebrow" data-i18n="org_eyebrow"></div>
+      <h2 data-i18n="branches_title"></h2>
+      <div class="list">
+        <div class="item"><div class="swatch" style="background:var(--kente-g)"></div><div><h3 data-i18n="br1_t"></h3><p data-i18n="br1_d"></p><span class="pill ok" data-i18n="active"></span></div></div>
+        <div class="item"><div class="swatch" style="background:var(--gold)"></div><div><h3 data-i18n="br2_t"></h3><p data-i18n="br2_d"></p><span class="pill wip" data-i18n="discussion"></span></div></div>
+      </div>
+      <h2 data-i18n="comm_title"></h2>
+      <div class="list">
+        <div class="item"><div class="swatch" style="background:var(--gold)"></div><div><h3 data-i18n="c1_t"></h3><p data-i18n="c1_d"></p></div></div>
+        <div class="item"><div class="swatch" style="background:var(--kente-r)"></div><div><h3 data-i18n="c2_t"></h3><p data-i18n="c2_d"></p></div></div>
+        <div class="item"><div class="swatch" style="background:var(--kente-g)"></div><div><h3 data-i18n="c3_t"></h3><p data-i18n="c3_d"></p></div></div>
+        <div class="item"><div class="swatch" style="background:var(--gold-soft)"></div><div><h3 data-i18n="c4_t"></h3><p data-i18n="c4_d"></p></div></div>
+      </div>
+    </section>
+
+    <!-- ADHÉRER -->
+    <section class="view" id="v-adherer" data-view="adherer">
+      <div class="eyebrow" data-i18n="join_eyebrow"></div>
+      <h2 data-i18n="join_title"></h2>
+      <p class="lead" data-i18n="join_lead"></p>
+      <ol class="steps">
+        <li data-i18n="join_s1"></li>
+        <li data-i18n="join_s2"></li>
+        <li data-i18n="join_s3"></li>
+      </ol>
+      <a class="cta" href="https://forms.gle/7RB86eY5LR4GUFF58" target="_blank" rel="noopener" data-i18n="cta_form"></a>
+    </section>
+
+    <!-- CONTACT & INSTALLER -->
+    <section class="view" id="v-contact" data-view="contact">
+      <div class="eyebrow" data-i18n="contact_eyebrow"></div>
+      <h2 data-i18n="contact_title"></h2>
+      <div class="item"><div><h3 data-i18n="site"></h3><p><a href="https://cercledesafricains.org" target="_blank" rel="noopener">cercledesafricains.org</a></p></div></div>
+      <div class="item"><div><h3 data-i18n="pres"></h3><p>Hervé Antoine Gbilimou</p></div></div>
+      <h2 data-i18n="install_title"></h2>
+      <div class="item"><div><h3>iPhone (Safari)</h3><ol class="steps" style="margin-top:8px"><li data-i18n="ios1"></li><li data-i18n="ios2"></li><li data-i18n="ios3"></li></ol></div></div>
+      <div class="item"><div><h3>Android (Chrome)</h3><ol class="steps" style="margin-top:8px"><li data-i18n="and1"></li><li data-i18n="and2"></li></ol></div></div>
+      <p class="note" data-i18n="install_note"></p>
+    </section>
+  </main>
+
+  <nav class="tabs" aria-label="Navigation">
+    <div class="in">
+      <a href="#accueil" data-tab="accueil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-i18n="t_home"></span></a>
+      <a href="#agenda" data-tab="agenda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-i18n="t_agenda"></span></a>
+      <a href="#cercle" data-tab="cercle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg><span data-i18n="t_org"></span></a>
+      <a href="#adherer" data-tab="adherer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-4 3-6 7-6s7 2 7 6M19 8v6M16 11h6"/></svg><span data-i18n="t_join"></span></a>
+      <a href="#contact" data-tab="contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v12H8l-4 4z"/></svg><span data-i18n="t_contact"></span></a>
+    </div>
+  </nav>
+</div>
+
+<script>
+const T = {
+  fr: {
+    home_eyebrow:"Organisation culturelle panafricaine",
+    home_title:"L'Afrique <em>se rassemble</em> en Russie",
+    home_lead:"Le Cercle des Africains réunit les communautés africaines de toute la Fédération de Russie autour de la culture, de l'éducation, de l'art et de l'entraide.",
+    fact_scope:"Présence à l'échelle nationale", fact_comm:"Commissions actives", fact_reg:"Enregistrement officiel en cours",
+    cta_join:"Devenir membre", cta_agenda:"Voir l'agenda",
+    agenda_eyebrow:"Agenda", agenda_title:"Prochains événements",
+    agenda_empty:"Les prochains événements seront annoncés ici. Revenez bientôt ou suivez nos annonces.",
+    agenda_recent:"Événements récents",
+    m_nov:"nov.", m_oct:"oct.", past:"Terminé",
+    ev1_t:"Casting de la Commission musicale", ev1_d:"Première activité de la Commission musicale du Cercle.",
+    ev2_t:"Mission à Perm", ev2_d:"31 oct. – 1er nov. 2026, avec le Club international de l'amitié de la région de Sverdlovsk. Rencontre avec la communauté africaine de Perm.",
+    org_eyebrow:"Le Cercle", branches_title:"Nos antennes",
+    br1_t:"Cercle des Africains d'Ekaterinbourg", br1_d:"Antenne fondatrice, région de Sverdlovsk.", active:"Active",
+    br2_t:"Perm", br2_d:"Création d'une antenne en discussion avec la communauté africaine de Perm.", discussion:"En discussion",
+    comm_title:"Nos commissions",
+    c1_t:"Commission culturelle", c1_d:"Événements, fêtes nationales africaines et rencontres culturelles.",
+    c2_t:"Commission musicale", c2_d:"Talents, castings et spectacles musicaux.",
+    c3_t:"Commission Éducation et Art", c3_d:"Faire connaître l'Afrique et les pays africains.",
+    c4_t:"Ressources humaines", c4_d:"Adhésions et suivi des membres.",
+    join_eyebrow:"Adhésion", join_title:"Rejoindre le Cercle",
+    join_lead:"L'adhésion est ouverte aux Africains et aux amis de l'Afrique vivant en Russie.",
+    join_s1:"Remplissez le formulaire d'adhésion en ligne.", join_s2:"La commission Ressources humaines étudie votre demande.", join_s3:"Vous êtes contacté pour finaliser votre adhésion.",
+    cta_form:"Ouvrir le formulaire d'adhésion",
+    contact_eyebrow:"Contact", contact_title:"Nous joindre",
+    site:"Site officiel", pres:"Président",
+    install_title:"Installer l'application",
+    ios1:"Ouvrez cette page dans Safari.", ios2:"Touchez le bouton Partager.", ios3:"Choisissez « Sur l'écran d'accueil ».",
+    and1:"Ouvrez cette page dans Chrome et touchez le menu ⋮.", and2:"Choisissez « Ajouter à l'écran d'accueil ».",
+    install_note:"L'icône du Cercle apparaît alors sur votre téléphone, comme une application.",
+    t_home:"Accueil", t_agenda:"Agenda", t_org:"Le Cercle", t_join:"Adhérer", t_contact:"Contact"
+  },
+  ru: {
+    home_eyebrow:"Панафриканская культурная организация",
+    home_title:"Африка <em>объединяется</em> в России",
+    home_lead:"«Круг африканцев» объединяет африканские сообщества по всей Российской Федерации вокруг культуры, образования, искусства и взаимопомощи.",
+    fact_scope:"Деятельность на всей территории РФ", fact_comm:"Действующие комиссии", fact_reg:"Идёт официальная регистрация",
+    cta_join:"Стать участником", cta_agenda:"Афиша",
+    agenda_eyebrow:"Афиша", agenda_title:"Ближайшие мероприятия",
+    agenda_empty:"Ближайшие мероприятия будут объявлены здесь. Заходите позже или следите за нашими объявлениями.",
+    agenda_recent:"Прошедшие мероприятия",
+    m_nov:"нояб.", m_oct:"окт.", past:"Завершено",
+    ev1_t:"Кастинг музыкальной комиссии", ev1_d:"Первое мероприятие музыкальной комиссии «Круга».",
+    ev2_t:"Поездка в Пермь", ev2_d:"31 окт. – 1 нояб. 2026 г., с Международным клубом дружбы Свердловской области. Встреча с африканским сообществом Перми.",
+    org_eyebrow:"О нас", branches_title:"Наши отделения",
+    br1_t:"Круг африканцев Екатеринбурга", br1_d:"Первое отделение, Свердловская область.", active:"Действует",
+    br2_t:"Пермь", br2_d:"Обсуждается создание отделения с африканским сообществом Перми.", discussion:"Обсуждается",
+    comm_title:"Наши комиссии",
+    c1_t:"Культурная комиссия", c1_d:"Мероприятия, национальные праздники африканских стран и культурные встречи.",
+    c2_t:"Музыкальная комиссия", c2_d:"Таланты, кастинги и музыкальные выступления.",
+    c3_t:"Комиссия по образованию и искусству", c3_d:"Рассказываем об Африке и африканских странах.",
+    c4_t:"Кадровая служба", c4_d:"Приём и сопровождение участников.",
+    join_eyebrow:"Членство", join_title:"Вступить в «Круг»",
+    join_lead:"Вступить могут африканцы и друзья Африки, живущие в России.",
+    join_s1:"Заполните онлайн-анкету.", join_s2:"Кадровая служба рассмотрит вашу заявку.", join_s3:"С вами свяжутся для завершения вступления.",
+    cta_form:"Открыть анкету",
+    contact_eyebrow:"Контакты", contact_title:"Связаться с нами",
+    site:"Официальный сайт", pres:"Президент",
+    install_title:"Установить приложение",
+    ios1:"Откройте эту страницу в Safari.", ios2:"Нажмите кнопку «Поделиться».", ios3:"Выберите «На экран „Домой“».",
+    and1:"Откройте страницу в Chrome и нажмите меню ⋮.", and2:"Выберите «Добавить на главный экран».",
+    install_note:"Значок «Круга» появится на телефоне, как у обычного приложения.",
+    t_home:"Главная", t_agenda:"Афиша", t_org:"О нас", t_join:"Вступить", t_contact:"Контакты"
+  }
+};
+let lang = "fr";
+try { const s = localStorage.getItem("cda_lang"); if (s === "ru" || s === "fr") lang = s; } catch(e) {}
+function applyLang(){
+  const d = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = d[el.dataset.i18n] ?? ""; });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => { el.innerHTML = d[el.dataset.i18nHtml] ?? ""; });
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+}
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => {
+  lang = b.dataset.lang; try { localStorage.setItem("cda_lang", lang); } catch(e) {} applyLang();
+}));
+const VIEWS = ["accueil","agenda","cercle","adherer","contact"];
+function route(){
+  const h = (location.hash || "").replace("#","");
+  const v = VIEWS.includes(h) ? h : "accueil";
+  document.querySelectorAll("section.view").forEach(s => s.classList.toggle("on", s.dataset.view === v));
+  document.querySelectorAll("nav.tabs a").forEach(a => {
+    if (a.dataset.tab === v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+  });
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route);
+applyLang(); route();
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
+}
+</script>
+</body>
+</html>
