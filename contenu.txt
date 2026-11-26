@@ -1,0 +1,187 @@
+############################################################
+#  CONTENU DE L'APPLICATION — CERCLE DES AFRICAINS
+#
+#  Pour modifier : sur GitHub, ouvrez ce fichier, cliquez sur
+#  le crayon ✏️, faites vos changements, puis « Commit changes ».
+#  L'application se met à jour en quelques minutes.
+#
+#  Règles simples :
+#  - Les lignes qui commencent par # sont des explications :
+#    l'application les ignore.
+#  - Laissez une ligne vide entre deux blocs.
+#  - Les versions russe (_ru) et anglaise (_en) sont facultatives :
+#    si elles manquent, le texte français s'affiche.
+############################################################
+
+
+############################################################
+#  1. ÉVÉNEMENTS
+#
+#  Pour ajouter un événement, copiez le modèle ci-dessous,
+#  collez-le sous la ligne [événements] et remplissez-le.
+#
+#  date      : AAAA-MM-JJ  (ex. 2026-12-05)          OBLIGATOIRE
+#  titre     : le titre en français                  OBLIGATOIRE
+#  catégorie : culture, sport, academique ou relations
+#  heure     : ex. 18:00                             (facultatif)
+#  lieu      : ex. Salle Panorama, Куйбышева 44А     (facultatif)
+#  texte     : une ou deux phrases                   (facultatif)
+#  lien      : lien d'inscription ou d'info          (facultatif)
+#
+#  L'application trie toute seule : à venir en haut,
+#  passés en dessous.
+#
+#  --- MODÈLE À COPIER ---
+#  date: 2026-12-05
+#  catégorie: culture
+#  heure: 18:00
+#  lieu: Ekaterinbourg
+#  titre: Titre de l'événement
+#  texte: Petite description.
+#  titre_ru: Название мероприятия
+#  texte_ru: Короткое описание.
+#  titre_en: Event title
+#  texte_en: Short description.
+#  lien: https://forms.gle/...
+############################################################
+
+[événements]
+
+date: 2026-11-14
+catégorie: culture
+lieu: Ekaterinbourg
+titre: Casting musique : rejoins le groupe musical du Cercle !
+texte: 50 places. Première activité de la Commission musicale.
+titre_ru: Музыкальный кастинг: вступай в музыкальную группу «Круга»!
+texte_ru: 50 мест. Первое мероприятие музыкальной комиссии.
+titre_en: Music casting: join the Cercle's music group!
+texte_en: 50 places. The first activity of the Music Commission.
+
+date: 2026-10-31
+catégorie: relations
+lieu: Perm
+titre: Mission à Perm
+texte: 31 oct. – 1er nov., avec le Club international de l'amitié de la région de Sverdlovsk. Rencontre avec la communauté africaine de Perm.
+titre_ru: Поездка в Пермь
+texte_ru: 31 окт. – 1 нояб., с Международным клубом дружбы Свердловской области. Встреча с африканским сообществом Перми.
+titre_en: Mission to Perm
+texte_en: 31 Oct – 1 Nov, with the International Friendship Club of the Sverdlovsk region. Meeting with Perm's African community.
+
+date: 2026-08-22
+catégorie: sport
+titre: CAN EKB : les champions !
+texte: Une performance remarquable de notre équipe lors du tournoi Cub World EKB.
+titre_ru: CAN EKB: мы чемпионы!
+texte_ru: Блестящее выступление нашей команды на турнире Cub World EKB.
+titre_en: CAN EKB: the champions!
+texte_en: An outstanding performance by our team at the Cub World EKB tournament.
+
+date: 2026-05-30
+catégorie: academique
+titre: Conférence « Jeunesse d'Afrique et de Russie »
+texte: Un dialogue pour construire l'avenir.
+titre_ru: Конференция «Молодёжь Африки и России»
+texte_ru: Диалог ради построения будущего.
+titre_en: Conference "Youth of Africa and Russia"
+texte_en: A dialogue for building the future.
+
+date: 2025-06-05
+catégorie: culture
+lieu: Ekaterinbourg
+titre: Journée Africaine 2025
+texte: Plus de 300 personnes ont célébré la richesse des cultures du continent.
+titre_ru: День Африки 2025
+texte_ru: Более 300 человек отметили богатство культур континента.
+titre_en: African Day 2025
+texte_en: More than 300 people celebrated the richness of the continent's cultures.
+
+
+############################################################
+#  2. GALERIE PHOTOS
+#
+#  Étape 1 : sur GitHub, ouvrez le dossier « galerie »,
+#            puis « Add file » > « Upload files » et déposez la photo.
+#  Étape 2 : ajoutez ici une ligne, sous [galerie], au format :
+#
+#  galerie/nom-de-la-photo.jpg | Légende FR | Подпись RU | Caption EN
+#
+#  Les photos s'affichent dans l'ordre des lignes.
+#  Conseil : photos de moins de 1 Mo (JPG), pour un chargement rapide.
+############################################################
+
+[galerie]
+
+
+############################################################
+#  3. FÊTES NATIONALES AFRICAINES
+#
+#  Une ligne par pays, au format :
+#  code | JJ/MM | année | type | Pays FR | Pays RU | Pays EN
+#
+#  code  : code du pays en 2 lettres (sert au drapeau)
+#  type  : indépendance ou nationale
+#  année : sert à calculer l'anniversaire (ex. 66e)
+#
+#  À VÉRIFIER : certains pays ont deux dates officielles.
+#  Ici on utilise surtout la date d'indépendance. Autre date :
+#  Cameroun 20/05 · Burkina Faso 11/12 · Niger 18/12 ·
+#  Centrafrique 01/12 · Algérie 01/11 · Tanzanie 26/04 ·
+#  Maroc 30/07 (Fête du Trône).
+############################################################
+
+[fêtes]
+
+DZ | 05/07 | 1962 | indépendance | Algérie | Алжир | Algeria
+AO | 11/11 | 1975 | indépendance | Angola | Ангола | Angola
+BJ | 01/08 | 1960 | indépendance | Bénin | Бенин | Benin
+BW | 30/09 | 1966 | indépendance | Botswana | Ботсвана | Botswana
+BF | 05/08 | 1960 | indépendance | Burkina Faso | Буркина-Фасо | Burkina Faso
+BI | 01/07 | 1962 | indépendance | Burundi | Бурунди | Burundi
+CV | 05/07 | 1975 | indépendance | Cap-Vert | Кабо-Верде | Cabo Verde
+CM | 01/01 | 1960 | indépendance | Cameroun | Камерун | Cameroon
+CF | 13/08 | 1960 | indépendance | Centrafrique | ЦАР | Central African Republic
+TD | 11/08 | 1960 | indépendance | Tchad | Чад | Chad
+KM | 06/07 | 1975 | indépendance | Comores | Коморы | Comoros
+CG | 15/08 | 1960 | indépendance | Congo | Республика Конго | Republic of the Congo
+CD | 30/06 | 1960 | indépendance | RD Congo | ДР Конго | DR Congo
+CI | 07/08 | 1960 | indépendance | Côte d'Ivoire | Кот-д'Ивуар | Côte d'Ivoire
+DJ | 27/06 | 1977 | indépendance | Djibouti | Джибути | Djibouti
+EG | 23/07 | 1952 | nationale | Égypte | Египет | Egypt
+GQ | 12/10 | 1968 | indépendance | Guinée équatoriale | Экваториальная Гвинея | Equatorial Guinea
+ER | 24/05 | 1991 | indépendance | Érythrée | Эритрея | Eritrea
+SZ | 06/09 | 1968 | indépendance | Eswatini | Эсватини | Eswatini
+ET | 28/05 | 1991 | nationale | Éthiopie | Эфиопия | Ethiopia
+GA | 17/08 | 1960 | indépendance | Gabon | Габон | Gabon
+GM | 18/02 | 1965 | indépendance | Gambie | Гамбия | The Gambia
+GH | 06/03 | 1957 | indépendance | Ghana | Гана | Ghana
+GN | 02/10 | 1958 | indépendance | Guinée | Гвинея | Guinea
+GW | 24/09 | 1973 | indépendance | Guinée-Bissau | Гвинея-Бисау | Guinea-Bissau
+KE | 12/12 | 1963 | indépendance | Kenya | Кения | Kenya
+LS | 04/10 | 1966 | indépendance | Lesotho | Лесото | Lesotho
+LR | 26/07 | 1847 | indépendance | Liberia | Либерия | Liberia
+LY | 24/12 | 1951 | indépendance | Libye | Ливия | Libya
+MG | 26/06 | 1960 | indépendance | Madagascar | Мадагаскар | Madagascar
+MW | 06/07 | 1964 | indépendance | Malawi | Малави | Malawi
+ML | 22/09 | 1960 | indépendance | Mali | Мали | Mali
+MR | 28/11 | 1960 | indépendance | Mauritanie | Мавритания | Mauritania
+MU | 12/03 | 1968 | indépendance | Maurice | Маврикий | Mauritius
+MA | 18/11 | 1956 | indépendance | Maroc | Марокко | Morocco
+MZ | 25/06 | 1975 | indépendance | Mozambique | Мозамбик | Mozambique
+NA | 21/03 | 1990 | indépendance | Namibie | Намибия | Namibia
+NE | 03/08 | 1960 | indépendance | Niger | Нигер | Niger
+NG | 01/10 | 1960 | indépendance | Nigeria | Нигерия | Nigeria
+RW | 01/07 | 1962 | indépendance | Rwanda | Руанда | Rwanda
+ST | 12/07 | 1975 | indépendance | Sao Tomé-et-Principe | Сан-Томе и Принсипи | São Tomé and Príncipe
+SN | 04/04 | 1960 | indépendance | Sénégal | Сенегал | Senegal
+SC | 29/06 | 1976 | indépendance | Seychelles | Сейшельские Острова | Seychelles
+SL | 27/04 | 1961 | indépendance | Sierra Leone | Сьерра-Леоне | Sierra Leone
+SO | 01/07 | 1960 | indépendance | Somalie | Сомали | Somalia
+ZA | 27/04 | 1994 | nationale | Afrique du Sud | ЮАР | South Africa
+SS | 09/07 | 2011 | indépendance | Soudan du Sud | Южный Судан | South Sudan
+SD | 01/01 | 1956 | indépendance | Soudan | Судан | Sudan
+TZ | 09/12 | 1961 | indépendance | Tanzanie | Танзания | Tanzania
+TG | 27/04 | 1960 | indépendance | Togo | Того | Togo
+TN | 20/03 | 1956 | indépendance | Tunisie | Тунис | Tunisia
+UG | 09/10 | 1962 | indépendance | Ouganda | Уганда | Uganda
+ZM | 24/10 | 1964 | indépendance | Zambie | Замбия | Zambia
+ZW | 18/04 | 1980 | indépendance | Zimbabwe | Зимбабве | Zimbabwe

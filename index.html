@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* Une seule ambiance : charte du Cercle — fond sombre, or, bandes kente. App mobile à onglets en bas. */
+  /* Charte du Cercle : fond sombre, or, bandes kente. App mobile à onglets en bas. */
   --bg:#14110c;
   --surface:#1f1a12;
   --line:#3a3122;
@@ -34,71 +34,98 @@
 html,body{height:100%}
 body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:var(--gold-soft)}
+button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px;border-radius:6px}
 .app{display:flex;flex-direction:column;min-height:100%;max-width:560px;margin:0 auto;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
-.kente{height:10px;background:
-  repeating-linear-gradient(90deg,var(--gold) 0 18px,var(--bg) 18px 22px,var(--kente-g) 22px 34px,var(--bg) 34px 38px,var(--kente-r) 38px 50px,var(--bg) 50px 54px);}
-header.top{padding:calc(18px + env(safe-area-inset-top)) 20px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:12px}
+.kente{height:10px;background:repeating-linear-gradient(90deg,var(--gold) 0 18px,var(--bg) 18px 22px,var(--kente-g) 22px 34px,var(--bg) 34px 38px,var(--kente-r) 38px 50px,var(--bg) 50px 54px)}
+header.top{padding:calc(16px + env(safe-area-inset-top)) 20px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
 .mark{width:52px;height:52px;flex:none;border-radius:50%;background:#fff}
-.hero-logo{width:min(220px,58vw);height:auto;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--gold);align-self:center;margin:6px 0 4px}
 .brand-name{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.06em;line-height:1.15;text-transform:uppercase}
 .brand-name span{display:block;color:var(--gold)}
-.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
-.lang button{background:none;border:0;color:var(--muted);font:600 13px var(--body);padding:7px 12px;cursor:pointer}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.lang button{background:none;border:0;color:var(--muted);font-weight:600;font-size:12.5px;padding:7px 10px;cursor:pointer}
 .lang button[aria-pressed="true"]{background:var(--gold);color:var(--bg)}
 main{flex:1;padding:4px 20px 24px}
-section.view{display:none;flex-direction:column;gap:20px}
+section.view{display:none;flex-direction:column;gap:18px}
 section.view.on{display:flex}
 h1{font-family:var(--display);font-weight:800;font-size:30px;line-height:1.08;text-wrap:balance}
 h1 em{font-style:normal;color:var(--gold)}
-h2{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.2;text-wrap:balance}
-h3{font-size:16px;font-weight:700}
+h2{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.2;text-wrap:balance;margin-top:6px}
+h3{font-size:16px;font-weight:700;line-height:1.3}
 p.lead{color:var(--muted);font-size:16px;max-width:62ch}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.hero{display:flex;flex-direction:column;gap:14px;padding:22px 0 6px}
+.hero{display:flex;flex-direction:column;gap:14px;padding:10px 0 2px}
+.hero-logo{width:min(200px,54vw);height:auto;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--gold);align-self:center;margin:6px 0 4px}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .fact{border-top:2px solid var(--gold);padding-top:10px}
 .fact b{display:block;font-family:var(--display);font-size:20px;font-variant-numeric:tabular-nums}
 .fact small{color:var(--muted);font-size:12.5px;line-height:1.3;display:block}
-.cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--bg);font-weight:700;text-decoration:none;border-radius:14px;padding:15px 18px;font-size:16px}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--bg);font-weight:700;text-decoration:none;border-radius:14px;padding:15px 18px;font-size:16px;border:0;cursor:pointer;width:100%}
 .cta.ghost{background:none;color:var(--gold-soft);border:1px solid var(--line)}
+.cta.small{padding:10px 14px;font-size:14px;width:auto;align-self:flex-start;border-radius:10px;margin-top:10px}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.spot{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--text);min-width:0}
+.spot .k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.spot .flag{font-size:30px;line-height:1}
+.spot b{font-size:15px;line-height:1.25;overflow-wrap:anywhere}
+.spot small{color:var(--muted);font-size:13px;line-height:1.35}
+.spot .count{font-family:var(--display);font-weight:700;color:var(--gold-soft);font-size:14px}
 .list{display:flex;flex-direction:column;gap:10px}
 .item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;gap:14px;align-items:flex-start}
+.item.today{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
 .item .date{flex:none;width:58px;text-align:center;border-right:1px solid var(--line);padding-right:12px}
 .item .date b{display:block;font-family:var(--display);font-size:22px;line-height:1;font-variant-numeric:tabular-nums}
-.item .date small{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.item .date small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
 .item p{color:var(--muted);font-size:14.5px;margin-top:4px}
+.meta{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;color:var(--gold-soft);margin-top:6px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
 .pill{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:999px;margin-top:8px}
 .pill.past{background:#2b261c;color:var(--muted)}
 .pill.ok{background:rgba(31,122,74,.22);color:#7fd3a6}
 .pill.wip{background:rgba(217,165,33,.18);color:var(--gold-soft)}
 .empty{border:1px dashed var(--line);border-radius:14px;padding:18px;color:var(--muted);font-size:14.5px}
 .swatch{width:10px;align-self:stretch;border-radius:4px;flex:none}
-.steps{counter-reset:s;display:flex;flex-direction:column;gap:10px;list-style:none}
-.steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:14.5px}
-.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--surface);border:1px solid var(--gold);color:var(--gold);font-weight:700;font-size:13px;display:grid;place-items:center}
-.note{font-size:13px;color:var(--muted)}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}
+.seg button{background:none;border:0;border-radius:9px;padding:10px 8px;font-weight:700;font-size:14px;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--gold);color:var(--bg)}
+.fete .flag{flex:none;width:58px;text-align:center;font-size:34px;line-height:1.1;border-right:1px solid var(--line);padding-right:12px}
+.fete .flag small{display:block;font-size:12px;color:var(--muted);margin-top:6px;font-variant-numeric:tabular-nums}
+.month{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:10px 0 -2px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gallery button{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;padding:0;cursor:pointer;text-align:left;display:flex;flex-direction:column}
+.gallery img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#2b261c}
+.gallery span{font-size:12.5px;color:var(--muted);padding:8px 10px;line-height:1.3}
+.lightbox{position:fixed;inset:0;background:rgba(10,8,5,.96);display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;z-index:20}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:78vh;border-radius:10px}
+.lightbox p{color:var(--text);text-align:center;max-width:46ch}
+.lightbox button{position:absolute;top:calc(14px + env(safe-area-inset-top));right:16px;background:var(--surface);border:1px solid var(--line);border-radius:999px;width:42px;height:42px;font-size:20px;cursor:pointer}
 .pillars{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .pillar{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px}
 .pillar b{font-family:var(--display);font-size:16px}
 .pillar span{color:var(--muted);font-size:13.5px;line-height:1.4}
 .pillar:nth-child(2){border-top-color:var(--kente-r)}.pillar:nth-child(3){border-top-color:var(--kente-g)}.pillar:nth-child(4){border-top-color:var(--gold-soft)}
-.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
-.item .date small{display:block}
 .contacts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .contact{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:2px;min-width:0}
 .contact b{font-size:13px;color:var(--gold)}
 .contact span{font-size:14px;overflow-wrap:anywhere}
-a.contact:active{border-color:var(--gold)}
-@media (max-width:360px){.pillars,.contacts{grid-template-columns:1fr}}
-nav.tabs{position:fixed;left:0;right:0;bottom:0;background:rgba(20,17,12,.96);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(8px)}
+.share{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;gap:16px;align-items:center}
+.share img{width:128px;height:128px;border-radius:10px;background:#fff;flex:none}
+.share p{color:var(--muted);font-size:14px}
+.copied{font-size:13px;color:#7fd3a6;min-height:1.2em;margin-top:6px}
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:10px;list-style:none}
+.steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:14.5px}
+.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--surface);border:1px solid var(--gold);color:var(--gold);font-weight:700;font-size:13px;display:grid;place-items:center}
+.note{font-size:13px;color:var(--muted)}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;background:rgba(20,17,12,.96);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(8px);z-index:10}
 nav.tabs .in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
-nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--muted);font-size:11.5px;font-weight:600;padding:6px 2px;border-radius:10px}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--muted);font-size:11.5px;font-weight:600;padding:6px 2px;border-radius:10px;text-align:center}
 nav.tabs a svg{width:22px;height:22px}
 nav.tabs a[aria-current="page"]{color:var(--gold)}
 @media (prefers-reduced-motion:no-preference){section.view.on{animation:in .25s ease-out}@keyframes in{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}}
-@media (max-width:380px){h1{font-size:26px}.facts{grid-template-columns:1fr 1fr 1fr}.fact b{font-size:18px}}
+@media (max-width:380px){h1{font-size:26px}.fact b{font-size:18px}}
+@media (max-width:360px){.pillars,.contacts,.feature{grid-template-columns:1fr}.share{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -109,9 +136,10 @@ nav.tabs a[aria-current="page"]{color:var(--gold)}
       <img class="mark" src="logo.png" alt="Logo du Cercle des Africains" width="52" height="52">
       <div class="brand-name">Cercle des<span>Africains</span></div>
     </div>
-    <div class="lang" role="group" aria-label="Langue / Язык">
+    <div class="lang" role="group" aria-label="Langue / Язык / Language">
       <button type="button" id="lang-fr" data-lang="fr" aria-pressed="true">FR</button>
       <button type="button" id="lang-ru" data-lang="ru" aria-pressed="false">RU</button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
     </div>
   </header>
 
@@ -119,17 +147,21 @@ nav.tabs a[aria-current="page"]{color:var(--gold)}
     <!-- ACCUEIL -->
     <section class="view" id="v-accueil" data-view="accueil">
       <div class="hero">
-        <img class="hero-logo" src="logo.png" alt="Cercle des Africains — Unité, Culture, Engagement" width="220" height="220">
+        <img class="hero-logo" src="logo.png" alt="Cercle des Africains — Unité, Culture, Engagement" width="200" height="200">
         <div class="eyebrow" data-i18n="home_eyebrow"></div>
         <h1 data-i18n-html="home_title"></h1>
         <p class="lead" data-i18n="home_lead"></p>
       </div>
+      <div class="feature">
+        <a class="spot" href="#agenda" id="spot-event"></a>
+        <a class="spot" href="#fetes" id="spot-fete"></a>
+      </div>
       <div class="facts">
         <div class="fact"><b>300+</b><small data-i18n="fact_jca"></small></div>
-        <div class="fact"><b>4</b><small data-i18n="fact_comm"></small></div>
+        <div class="fact"><b>54</b><small data-i18n="fact_countries"></small></div>
         <div class="fact"><b>2026</b><small data-i18n="fact_can"></small></div>
       </div>
-      <a class="cta" href="https://forms.gle/7RB86eY5LR4GUFF58" target="_blank" rel="noopener" data-i18n="cta_join"></a>
+      <a class="cta" href="#adherer" data-i18n="cta_join"></a>
       <h2 data-i18n="pillars_title"></h2>
       <div class="pillars">
         <div class="pillar"><b data-i18n="p1_t"></b><span data-i18n="p1_d"></span></div>
@@ -137,37 +169,24 @@ nav.tabs a[aria-current="page"]{color:var(--gold)}
         <div class="pillar"><b data-i18n="p3_t"></b><span data-i18n="p3_d"></span></div>
         <div class="pillar"><b data-i18n="p4_t"></b><span data-i18n="p4_d"></span></div>
       </div>
-      <a class="cta ghost" href="#agenda" data-i18n="cta_agenda"></a>
     </section>
 
-    <!-- AGENDA -->
+    <!-- AGENDA : événements + fêtes nationales -->
     <section class="view" id="v-agenda" data-view="agenda">
       <div class="eyebrow" data-i18n="agenda_eyebrow"></div>
-      <h2 data-i18n="agenda_title"></h2>
-      <div class="empty"><span data-i18n="agenda_empty"></span> <a href="https://t.me/CercleDesAfricains" target="_blank" rel="noopener">Telegram</a></div>
-      <h2 data-i18n="agenda_recent"></h2>
-      <div class="list">
-        <div class="item">
-          <div class="date"><b>14</b><small data-i18n="m_nov"></small><small>2026</small></div>
-          <div><span class="tag" data-i18n="cat_culture"></span><h3 data-i18n="ev1_t"></h3><p data-i18n="ev1_d"></p><span class="pill past" data-i18n="past"></span></div>
-        </div>
-        <div class="item">
-          <div class="date"><b>31</b><small data-i18n="m_oct"></small><small>2026</small></div>
-          <div><span class="tag" data-i18n="cat_rel"></span><h3 data-i18n="ev2_t"></h3><p data-i18n="ev2_d"></p><span class="pill past" data-i18n="past"></span></div>
-        </div>
-        <div class="item">
-          <div class="date"><b>22</b><small data-i18n="m_aug"></small><small>2026</small></div>
-          <div><span class="tag" data-i18n="cat_sport"></span><h3 data-i18n="ev3_t"></h3><p data-i18n="ev3_d"></p><span class="pill ok" data-i18n="champ"></span></div>
-        </div>
-        <div class="item">
-          <div class="date"><b>30</b><small data-i18n="m_may"></small><small>2026</small></div>
-          <div><span class="tag" data-i18n="cat_acad"></span><h3 data-i18n="ev4_t"></h3><p data-i18n="ev4_d"></p><span class="pill past" data-i18n="past"></span></div>
-        </div>
-        <div class="item">
-          <div class="date"><b>5</b><small data-i18n="m_jun"></small><small>2025</small></div>
-          <div><span class="tag" data-i18n="cat_culture"></span><h3 data-i18n="ev5_t"></h3><p data-i18n="ev5_d"></p><span class="pill past" data-i18n="past"></span></div>
-        </div>
+      <div class="seg" role="group">
+        <button type="button" id="seg-ev" data-seg="agenda" aria-pressed="true" data-i18n="seg_events"></button>
+        <button type="button" id="seg-fe" data-seg="fetes" aria-pressed="false" data-i18n="seg_fetes"></button>
       </div>
+      <div id="pane-events" class="list" style="gap:18px"></div>
+      <div id="pane-fetes" class="list" style="gap:10px" hidden></div>
+    </section>
+
+    <!-- GALERIE -->
+    <section class="view" id="v-galerie" data-view="galerie">
+      <div class="eyebrow" data-i18n="gal_eyebrow"></div>
+      <h2 data-i18n="gal_title"></h2>
+      <div id="gallery"></div>
     </section>
 
     <!-- LE CERCLE -->
@@ -187,6 +206,31 @@ nav.tabs a[aria-current="page"]{color:var(--gold)}
         <div class="item"><div class="swatch" style="background:var(--kente-g)"></div><div><h3 data-i18n="c3_t"></h3><p data-i18n="c3_d"></p></div></div>
         <div class="item"><div class="swatch" style="background:var(--gold-soft)"></div><div><h3 data-i18n="c4_t"></h3><p data-i18n="c4_d"></p></div></div>
       </div>
+
+      <h2 id="contact" data-i18n="contact_title"></h2>
+      <div class="contacts">
+        <a class="contact" href="https://wa.me/79122045308" target="_blank" rel="noopener"><b>WhatsApp</b><span>+7 912 204-53-08</span></a>
+        <a class="contact" href="https://t.me/CercleDesAfricains" target="_blank" rel="noopener"><b>Telegram</b><span>@CercleDesAfricains</span></a>
+        <a class="contact" href="https://youtube.com/@cercledesafricains" target="_blank" rel="noopener"><b>YouTube</b><span>@cercledesafricains</span></a>
+        <div class="contact"><b data-i18n="email"></b><span>contact@cercledesafricains.ru</span></div>
+        <a class="contact" href="https://cercledesafricains.org" target="_blank" rel="noopener"><b data-i18n="site"></b><span>cercledesafricains.org</span></a>
+        <div class="contact"><b data-i18n="addr"></b><span data-i18n="addr_v"></span></div>
+      </div>
+      <div class="item"><div><h3 data-i18n="pres"></h3><p>Hervé Antoine Gbilimou</p></div></div>
+
+      <h2 data-i18n="share_title"></h2>
+      <div class="share">
+        <img src="qr.png" alt="QR code de l'application" width="128" height="128">
+        <div>
+          <p data-i18n="share_text"></p>
+          <button type="button" class="cta small" id="copy-link" data-i18n="share_copy"></button>
+          <div class="copied" id="copied" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <h2 data-i18n="install_title"></h2>
+      <div class="item"><div><h3>iPhone (Safari)</h3><ol class="steps" style="margin-top:8px"><li data-i18n="ios1"></li><li data-i18n="ios2"></li><li data-i18n="ios3"></li></ol></div></div>
+      <div class="item"><div><h3>Android (Chrome)</h3><ol class="steps" style="margin-top:8px"><li data-i18n="and1"></li><li data-i18n="and2"></li></ol></div></div>
     </section>
 
     <!-- ADHÉRER -->
@@ -201,62 +245,51 @@ nav.tabs a[aria-current="page"]{color:var(--gold)}
       </ol>
       <a class="cta" href="https://forms.gle/7RB86eY5LR4GUFF58" target="_blank" rel="noopener" data-i18n="cta_form"></a>
     </section>
-
-    <!-- CONTACT -->
-    <section class="view" id="v-contact" data-view="contact">
-      <div class="eyebrow" data-i18n="contact_eyebrow"></div>
-      <h2 data-i18n="contact_title"></h2>
-      <div class="contacts">
-        <a class="contact" href="https://wa.me/79122045308" target="_blank" rel="noopener"><b>WhatsApp</b><span>+7 912 204-53-08</span></a>
-        <a class="contact" href="https://t.me/CercleDesAfricains" target="_blank" rel="noopener"><b>Telegram</b><span>@CercleDesAfricains</span></a>
-        <a class="contact" href="https://youtube.com/@cercledesafricains" target="_blank" rel="noopener"><b>YouTube</b><span>@cercledesafricains</span></a>
-        <div class="contact"><b data-i18n="email"></b><span>contact@cercledesafricains.ru</span></div>
-        <a class="contact" href="https://cercledesafricains.org" target="_blank" rel="noopener"><b data-i18n="site"></b><span>cercledesafricains.org</span></a>
-        <div class="contact"><b data-i18n="addr"></b><span data-i18n="addr_v"></span></div>
-      </div>
-      <div class="item"><div><h3 data-i18n="pres"></h3><p>Hervé Antoine Gbilimou</p></div></div>
-      <h2 data-i18n="install_title"></h2>
-      <div class="item"><div><h3>iPhone (Safari)</h3><ol class="steps" style="margin-top:8px"><li data-i18n="ios1"></li><li data-i18n="ios2"></li><li data-i18n="ios3"></li></ol></div></div>
-      <div class="item"><div><h3>Android (Chrome)</h3><ol class="steps" style="margin-top:8px"><li data-i18n="and1"></li><li data-i18n="and2"></li></ol></div></div>
-      <p class="note" data-i18n="install_note"></p>
-    </section>
   </main>
 
   <nav class="tabs" aria-label="Navigation">
     <div class="in">
       <a href="#accueil" data-tab="accueil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-i18n="t_home"></span></a>
       <a href="#agenda" data-tab="agenda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-i18n="t_agenda"></span></a>
+      <a href="#galerie" data-tab="galerie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5-5-9 8"/></svg><span data-i18n="t_gal"></span></a>
       <a href="#cercle" data-tab="cercle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg><span data-i18n="t_org"></span></a>
       <a href="#adherer" data-tab="adherer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-4 3-6 7-6s7 2 7 6M19 8v6M16 11h6"/></svg><span data-i18n="t_join"></span></a>
-      <a href="#contact" data-tab="contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v12H8l-4 4z"/></svg><span data-i18n="t_contact"></span></a>
     </div>
   </nav>
 </div>
 
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button type="button" id="lb-close" aria-label="Fermer">×</button>
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+</div>
+
 <script>
+const APP_URL = "https://herveantoinegbilimou1-web.github.io/cercle-app/";
 const T = {
   fr: {
     home_eyebrow:"Unité • Culture • Engagement",
     home_title:"Une maison commune pour <em>la diaspora africaine</em>",
     home_lead:"Le Cercle des Africains est une organisation panafricaine qui agit dans toute la Fédération de Russie. Il valorise et fait connaître la culture africaine par des événements culturels, sportifs et académiques.",
-    fact_jca:"Participants à la Journée Africaine 2025", fact_comm:"Commissions actives", fact_can:"Champions de la CAN EKB",
-    cta_join:"Devenir membre", cta_agenda:"Voir l'agenda",
+    fact_jca:"Participants à la Journée Africaine 2025", fact_countries:"Pays africains célébrés", fact_can:"Champions de la CAN EKB",
+    cta_join:"Devenir membre",
     pillars_title:"Nos activités",
     p1_t:"Sport", p1_d:"Tournois de football et de basket, dont la CAN EKB.",
     p2_t:"Culture", p2_d:"Journée culturelle, soirées africaines, sorties.",
     p3_t:"Savoir", p3_d:"Conférences, débats et accompagnement académique.",
     p4_t:"Entraide", p4_d:"Accueil des nouveaux arrivants et réseau solidaire.",
-    agenda_eyebrow:"Agenda", agenda_title:"Prochains événements",
-    agenda_empty:"Aucun événement annoncé pour le moment. Les prochains seront publiés ici et sur notre canal",
-    agenda_recent:"Événements passés",
-    m_jun:"juin", m_may:"mai", m_aug:"août", m_oct:"oct.", m_nov:"nov.",
-    cat_culture:"Culture", cat_sport:"Sport", cat_acad:"Académique", cat_rel:"Relations",
-    past:"Terminé", champ:"Victoire",
-    ev1_t:"Casting musique : rejoins le groupe musical du Cercle !", ev1_d:"Ekaterinbourg · 50 places. Première activité de la Commission musicale.",
-    ev2_t:"Mission à Perm", ev2_d:"31 oct. – 1er nov., avec le Club international de l'amitié de la région de Sverdlovsk. Rencontre avec la communauté africaine de Perm.",
-    ev3_t:"CAN EKB : les champions !", ev3_d:"Une performance remarquable de notre équipe lors du tournoi Cub World EKB.",
-    ev4_t:"Conférence « Jeunesse d'Afrique et de Russie »", ev4_d:"Un dialogue pour construire l'avenir.",
-    ev5_t:"Journée Africaine 2025", ev5_d:"Plus de 300 personnes ont célébré la richesse des cultures du continent à Ekaterinbourg.",
+    spot_event:"Prochain événement", spot_noevent:"Aucun événement annoncé", spot_noevent_d:"Suivez nos annonces sur Telegram.",
+    spot_fete:"Prochaine fête nationale",
+    agenda_eyebrow:"Agenda", seg_events:"Événements", seg_fetes:"Fêtes nationales",
+    upcoming:"À venir", past_title:"Événements passés",
+    agenda_empty:"Aucun événement annoncé pour le moment. Les prochains seront publiés ici et sur notre canal Telegram.",
+    fetes_intro:"Les fêtes d'indépendance et fêtes nationales des 54 pays africains, dans l'ordre de l'année.",
+    today:"Aujourd'hui !", in_days:"Dans {n} jours", tomorrow:"Demain",
+    cat_culture:"Culture", cat_sport:"Sport", cat_academique:"Académique", cat_relations:"Relations",
+    past:"Terminé", more:"S'inscrire / En savoir plus",
+    type_independance:"Fête de l'indépendance", type_nationale:"Fête nationale",
+    gal_eyebrow:"Galerie", gal_title:"Nos moments forts",
+    gal_empty:"Les photos de nos événements arrivent bientôt.",
     org_eyebrow:"Le Cercle", about_title:"Qui sommes-nous",
     about_lead:"Organisation culturelle panafricaine nationale, le Cercle rassemble les communautés africaines de Russie autour de la culture, du sport, du savoir et de l'entraide. Son enregistrement officiel est en cours.",
     branches_title:"Nos antennes",
@@ -267,41 +300,44 @@ const T = {
     c2_t:"Commission musicale", c2_d:"Talents, castings et spectacles musicaux.",
     c3_t:"Commission Éducation et Art", c3_d:"Faire connaître l'Afrique et les pays africains.",
     c4_t:"Ressources humaines", c4_d:"Adhésions et suivi des membres.",
+    contact_title:"Nous joindre",
+    email:"E-mail", site:"Site officiel", addr:"Adresse", addr_v:"Ekaterinbourg, Fédération de Russie",
+    pres:"Président",
+    share_title:"Partager l'application",
+    share_text:"Faites scanner ce QR code avec l'appareil photo, ou envoyez le lien.",
+    share_copy:"Copier le lien", copied:"Lien copié !", copy_fail:"Copie impossible : ",
+    install_title:"Installer l'application",
+    ios1:"Ouvrez cette page dans Safari.", ios2:"Touchez le bouton Partager.", ios3:"Choisissez « Sur l'écran d'accueil ».",
+    and1:"Ouvrez cette page dans Chrome et touchez le menu ⋮.", and2:"Choisissez « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
     join_eyebrow:"Adhésion", join_title:"Rejoindre le Cercle",
     join_lead:"Faites partie de la communauté : partagez, célébrez et construisez avec nous une diaspora forte et unie. L'adhésion est ouverte aux Africains et aux amis de l'Afrique vivant en Russie.",
     join_s1:"Remplissez le formulaire d'adhésion en ligne.", join_s2:"La commission Ressources humaines étudie votre demande.", join_s3:"Vous êtes contacté pour finaliser votre adhésion.",
     cta_form:"Ouvrir le formulaire d'adhésion",
-    contact_eyebrow:"Contact", contact_title:"Nous joindre",
-    email:"E-mail", site:"Site officiel", addr:"Adresse", addr_v:"Ekaterinbourg, Fédération de Russie",
-    pres:"Président",
-    install_title:"Installer l'application",
-    ios1:"Ouvrez cette page dans Safari.", ios2:"Touchez le bouton Partager.", ios3:"Choisissez « Sur l'écran d'accueil ».",
-    and1:"Ouvrez cette page dans Chrome et touchez le menu ⋮.", and2:"Choisissez « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
-    install_note:"L'icône du Cercle apparaît alors sur votre téléphone, comme une application.",
-    t_home:"Accueil", t_agenda:"Agenda", t_org:"Le Cercle", t_join:"Adhérer", t_contact:"Contact"
+    t_home:"Accueil", t_agenda:"Agenda", t_gal:"Galerie", t_org:"Le Cercle", t_join:"Adhérer"
   },
   ru: {
     home_eyebrow:"Единство • Культура • Вовлечённость",
     home_title:"Общий дом для <em>африканской диаспоры</em>",
     home_lead:"«Круг африканцев» — панафриканская организация, действующая по всей Российской Федерации. Мы популяризируем африканскую культуру через культурные, спортивные и научные мероприятия.",
-    fact_jca:"Участников Дня Африки 2025", fact_comm:"Действующие комиссии", fact_can:"Чемпионы CAN EKB",
-    cta_join:"Стать участником", cta_agenda:"Афиша",
+    fact_jca:"Участников Дня Африки 2025", fact_countries:"Африканских стран в календаре", fact_can:"Чемпионы CAN EKB",
+    cta_join:"Стать участником",
     pillars_title:"Наша деятельность",
     p1_t:"Спорт", p1_d:"Турниры по футболу и баскетболу, в том числе CAN EKB.",
     p2_t:"Культура", p2_d:"День культуры, африканские вечера, выезды.",
     p3_t:"Знания", p3_d:"Конференции, дискуссии и академическая поддержка.",
     p4_t:"Взаимопомощь", p4_d:"Встреча новоприбывших и сеть поддержки.",
-    agenda_eyebrow:"Афиша", agenda_title:"Ближайшие мероприятия",
-    agenda_empty:"Пока мероприятия не объявлены. Следите за новостями здесь и в нашем канале",
-    agenda_recent:"Прошедшие мероприятия",
-    m_jun:"июн.", m_may:"мая", m_aug:"авг.", m_oct:"окт.", m_nov:"нояб.",
-    cat_culture:"Культура", cat_sport:"Спорт", cat_acad:"Наука", cat_rel:"Сотрудничество",
-    past:"Завершено", champ:"Победа",
-    ev1_t:"Музыкальный кастинг: вступай в музыкальную группу «Круга»!", ev1_d:"Екатеринбург · 50 мест. Первое мероприятие музыкальной комиссии.",
-    ev2_t:"Поездка в Пермь", ev2_d:"31 окт. – 1 нояб., с Международным клубом дружбы Свердловской области. Встреча с африканским сообществом Перми.",
-    ev3_t:"CAN EKB: мы чемпионы!", ev3_d:"Блестящее выступление нашей команды на турнире Cub World EKB.",
-    ev4_t:"Конференция «Молодёжь Африки и России»", ev4_d:"Диалог ради построения будущего.",
-    ev5_t:"День Африки 2025", ev5_d:"Более 300 человек отметили богатство культур континента в Екатеринбурге.",
+    spot_event:"Ближайшее мероприятие", spot_noevent:"Мероприятия пока не объявлены", spot_noevent_d:"Следите за новостями в Telegram.",
+    spot_fete:"Ближайший национальный праздник",
+    agenda_eyebrow:"Афиша", seg_events:"Мероприятия", seg_fetes:"Нац. праздники",
+    upcoming:"Скоро", past_title:"Прошедшие мероприятия",
+    agenda_empty:"Пока мероприятия не объявлены. Следите за новостями здесь и в нашем Telegram-канале.",
+    fetes_intro:"Дни независимости и национальные праздники 54 африканских стран в порядке года.",
+    today:"Сегодня!", in_days:"Через {n} дн.", tomorrow:"Завтра",
+    cat_culture:"Культура", cat_sport:"Спорт", cat_academique:"Наука", cat_relations:"Сотрудничество",
+    past:"Завершено", more:"Записаться / Подробнее",
+    type_independance:"День независимости", type_nationale:"Национальный праздник",
+    gal_eyebrow:"Галерея", gal_title:"Яркие моменты",
+    gal_empty:"Фотографии наших мероприятий скоро появятся.",
     org_eyebrow:"О нас", about_title:"Кто мы",
     about_lead:"Общероссийская панафриканская культурная организация, объединяющая африканские сообщества России вокруг культуры, спорта, знаний и взаимопомощи. Идёт процесс официальной регистрации.",
     branches_title:"Наши отделения",
@@ -312,44 +348,223 @@ const T = {
     c2_t:"Музыкальная комиссия", c2_d:"Таланты, кастинги и музыкальные выступления.",
     c3_t:"Комиссия по образованию и искусству", c3_d:"Рассказываем об Африке и африканских странах.",
     c4_t:"Кадровая служба", c4_d:"Приём и сопровождение участников.",
+    contact_title:"Связаться с нами",
+    email:"Эл. почта", site:"Официальный сайт", addr:"Адрес", addr_v:"Екатеринбург, Российская Федерация",
+    pres:"Президент",
+    share_title:"Поделиться приложением",
+    share_text:"Отсканируйте QR-код камерой телефона или отправьте ссылку.",
+    share_copy:"Скопировать ссылку", copied:"Ссылка скопирована!", copy_fail:"Не удалось скопировать: ",
+    install_title:"Установить приложение",
+    ios1:"Откройте эту страницу в Safari.", ios2:"Нажмите кнопку «Поделиться».", ios3:"Выберите «На экран „Домой“».",
+    and1:"Откройте страницу в Chrome и нажмите меню ⋮.", and2:"Выберите «Установить приложение» или «Добавить на главный экран».",
     join_eyebrow:"Членство", join_title:"Вступить в «Круг»",
     join_lead:"Станьте частью сообщества: делитесь, празднуйте и стройте вместе с нами сильную и сплочённую диаспору. Вступить могут африканцы и друзья Африки, живущие в России.",
     join_s1:"Заполните онлайн-анкету.", join_s2:"Кадровая служба рассмотрит вашу заявку.", join_s3:"С вами свяжутся для завершения вступления.",
     cta_form:"Открыть анкету",
-    contact_eyebrow:"Контакты", contact_title:"Связаться с нами",
-    email:"Эл. почта", site:"Официальный сайт", addr:"Адрес", addr_v:"Екатеринбург, Российская Федерация",
-    pres:"Президент",
-    install_title:"Установить приложение",
-    ios1:"Откройте эту страницу в Safari.", ios2:"Нажмите кнопку «Поделиться».", ios3:"Выберите «На экран „Домой“».",
-    and1:"Откройте страницу в Chrome и нажмите меню ⋮.", and2:"Выберите «Установить приложение» или «Добавить на главный экран».",
-    install_note:"Значок «Круга» появится на телефоне, как у обычного приложения.",
-    t_home:"Главная", t_agenda:"Афиша", t_org:"О нас", t_join:"Вступить", t_contact:"Контакты"
+    t_home:"Главная", t_agenda:"Афиша", t_gal:"Галерея", t_org:"О нас", t_join:"Вступить"
+  },
+  en: {
+    home_eyebrow:"Unity • Culture • Commitment",
+    home_title:"A common home for <em>the African diaspora</em>",
+    home_lead:"The Cercle des Africains is a pan-African organisation active across the Russian Federation. It promotes African culture through cultural, sporting and academic events.",
+    fact_jca:"People at African Day 2025", fact_countries:"African countries celebrated", fact_can:"CAN EKB champions",
+    cta_join:"Become a member",
+    pillars_title:"What we do",
+    p1_t:"Sport", p1_d:"Football and basketball tournaments, including the CAN EKB.",
+    p2_t:"Culture", p2_d:"Culture day, African evenings, outings.",
+    p3_t:"Knowledge", p3_d:"Conferences, debates and academic support.",
+    p4_t:"Mutual aid", p4_d:"Welcoming newcomers and a support network.",
+    spot_event:"Next event", spot_noevent:"No event announced yet", spot_noevent_d:"Follow our news on Telegram.",
+    spot_fete:"Next national day",
+    agenda_eyebrow:"Agenda", seg_events:"Events", seg_fetes:"National days",
+    upcoming:"Coming up", past_title:"Past events",
+    agenda_empty:"No event announced for now. The next ones will appear here and on our Telegram channel.",
+    fetes_intro:"Independence and national days of the 54 African countries, in calendar order.",
+    today:"Today!", in_days:"In {n} days", tomorrow:"Tomorrow",
+    cat_culture:"Culture", cat_sport:"Sport", cat_academique:"Academic", cat_relations:"Partnerships",
+    past:"Done", more:"Register / Learn more",
+    type_independance:"Independence Day", type_nationale:"National Day",
+    gal_eyebrow:"Gallery", gal_title:"Highlights",
+    gal_empty:"Photos of our events are coming soon.",
+    org_eyebrow:"The Cercle", about_title:"Who we are",
+    about_lead:"A nationwide pan-African cultural organisation, the Cercle brings Russia's African communities together around culture, sport, knowledge and mutual aid. Its official registration is under way.",
+    branches_title:"Our branches",
+    br1_t:"Cercle des Africains of Ekaterinburg", br1_d:"Founding branch, Sverdlovsk region.", active:"Active",
+    br2_t:"Perm", br2_d:"A branch is under discussion with Perm's African community.", discussion:"Under discussion",
+    comm_title:"Our commissions",
+    c1_t:"Cultural Commission", c1_d:"Events, African national days and cultural meetings.",
+    c2_t:"Music Commission", c2_d:"Talent, castings and music shows.",
+    c3_t:"Education and Art Commission", c3_d:"Making Africa and African countries better known.",
+    c4_t:"Human Resources", c4_d:"Memberships and member follow-up.",
+    contact_title:"Contact us",
+    email:"Email", site:"Official website", addr:"Address", addr_v:"Ekaterinburg, Russian Federation",
+    pres:"President",
+    share_title:"Share the app",
+    share_text:"Scan this QR code with a phone camera, or send the link.",
+    share_copy:"Copy link", copied:"Link copied!", copy_fail:"Could not copy: ",
+    install_title:"Install the app",
+    ios1:"Open this page in Safari.", ios2:"Tap the Share button.", ios3:"Choose “Add to Home Screen”.",
+    and1:"Open this page in Chrome and tap the ⋮ menu.", and2:"Choose “Install app” or “Add to Home screen”.",
+    join_eyebrow:"Membership", join_title:"Join the Cercle",
+    join_lead:"Be part of the community: share, celebrate and build with us a strong, united diaspora. Membership is open to Africans and friends of Africa living in Russia.",
+    join_s1:"Fill in the online membership form.", join_s2:"The Human Resources commission reviews your request.", join_s3:"We contact you to complete your membership.",
+    cta_form:"Open the membership form",
+    t_home:"Home", t_agenda:"Agenda", t_gal:"Gallery", t_org:"The Cercle", t_join:"Join"
   }
 };
+const LOCALE = {fr:"fr-FR", ru:"ru-RU", en:"en-GB"};
 let lang = "fr";
-try { const s = localStorage.getItem("cda_lang"); if (s === "ru" || s === "fr") lang = s; } catch(e) {}
+try { const s = localStorage.getItem("cda_lang"); if (T[s]) lang = s; } catch(e) {}
+
+/* ---------- Lecture de contenu.txt ---------- */
+let DATA = {events:[], photos:[], fetes:[]};
+function norm(k){ return k.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").trim(); }
+function parseContent(txt){
+  const out = {events:[], photos:[], fetes:[]};
+  let section = "", cur = null;
+  const flush = () => { if (cur && cur.date && cur.titre) out.events.push(cur); cur = null; };
+  for (const raw of txt.split(/\r?\n/)) {
+    const line = raw.trim();
+    if (line.startsWith("#")) continue;
+    const sec = line.match(/^\[(.+)\]$/);
+    if (sec) { flush(); section = norm(sec[1]); continue; }
+    if (!line) { if (section.startsWith("evenement")) flush(); continue; }
+    if (section.startsWith("evenement")) {
+      const i = line.indexOf(":"); if (i < 1) continue;
+      const k = norm(line.slice(0,i)), v = line.slice(i+1).trim();
+      if (k === "date" && cur && cur.date) flush();
+      cur = cur || {}; cur[k] = v;
+    } else if (section.startsWith("galerie")) {
+      const p = line.split("|").map(s => s.trim());
+      if (p[0]) out.photos.push({src:p[0], fr:p[1]||"", ru:p[2]||"", en:p[3]||""});
+    } else if (section.startsWith("fete")) {
+      const p = line.split("|").map(s => s.trim());
+      const dm = (p[1]||"").match(/^(\d{1,2})\/(\d{1,2})$/);
+      if (p.length >= 5 && dm) out.fetes.push({code:p[0].toUpperCase(), d:+dm[1], m:+dm[2], year:+p[2]||0,
+        type:norm(p[3]||"").startsWith("indep") ? "independance" : "nationale", fr:p[4], ru:p[5]||p[4], en:p[6]||p[4]});
+    }
+  }
+  flush();
+  return out;
+}
+function loc(o, key){ return o[key + "_" + lang] || o[key] || ""; }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function flag(code){ return /^[A-Z]{2}$/.test(code) ? String.fromCodePoint(...[...code].map(c => 0x1F1E6 + c.charCodeAt(0) - 65)) : "🌍"; }
+function today0(){ const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
+function parseDate(s){ const m = (s||"").match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/); return m ? new Date(+m[1], +m[2]-1, +m[3]) : null; }
+function ordinal(n){
+  if (lang === "fr") return n === 1 ? "1er" : n + "e";
+  if (lang === "ru") return n + "-я";
+  const s = ["th","st","nd","rd"], v = n % 100; return n + (s[(v-20)%10] || s[v] || s[0]);
+}
+function anniv(n){ return lang === "fr" ? ordinal(n) + " anniversaire" : lang === "ru" ? ordinal(n) + " годовщина" : ordinal(n) + " anniversary"; }
+function daysLabel(n){ return n === 0 ? T[lang].today : n === 1 ? T[lang].tomorrow : T[lang].in_days.replace("{n}", n); }
+function nextFetes(){
+  const t = today0();
+  return DATA.fetes.map(f => {
+    let d = new Date(t.getFullYear(), f.m-1, f.d);
+    if (d < t) d = new Date(t.getFullYear()+1, f.m-1, f.d);
+    return {...f, next:d, days:Math.round((d - t)/864e5), age:d.getFullYear() - f.year};
+  }).sort((a,b) => a.days - b.days);
+}
+
+/* ---------- Affichage ---------- */
+function renderEvents(){
+  const L = T[lang], t = today0(), fmtM = new Intl.DateTimeFormat(LOCALE[lang], {month:"short"});
+  const evs = DATA.events.map(e => ({...e, dt:parseDate(e.date)})).filter(e => e.dt);
+  const up = evs.filter(e => e.dt >= t).sort((a,b) => a.dt - b.dt);
+  const past = evs.filter(e => e.dt < t).sort((a,b) => b.dt - a.dt);
+  const card = (e, isPast) => {
+    const cat = L["cat_" + norm(e.categorie || "")] || "";
+    const meta = [e.heure && "🕒 " + esc(e.heure), e.lieu && "📍 " + esc(e.lieu)].filter(Boolean).join("</span><span>");
+    return `<div class="item"><div class="date"><b>${e.dt.getDate()}</b><small>${fmtM.format(e.dt)}</small><small>${e.dt.getFullYear()}</small></div>
+      <div>${cat ? `<span class="tag">${esc(cat)}</span>` : ""}<h3>${esc(loc(e,"titre"))}</h3>
+      ${loc(e,"texte") ? `<p>${esc(loc(e,"texte"))}</p>` : ""}
+      ${meta && !isPast ? `<div class="meta"><span>${meta}</span></div>` : ""}
+      ${!isPast && /^https?:\/\//.test(e.lien||"") ? `<a class="cta small" href="${esc(e.lien)}" target="_blank" rel="noopener">${esc(L.more)}</a>` : ""}
+      ${isPast ? `<span class="pill past">${esc(L.past)}</span>` : `<span class="pill ok">${esc(daysLabel(Math.round((e.dt - t)/864e5)))}</span>`}</div></div>`;
+  };
+  document.getElementById("pane-events").innerHTML =
+    `<div class="list"><h2>${esc(L.upcoming)}</h2>${up.length ? up.map(e => card(e,false)).join("") : `<div class="empty">${esc(L.agenda_empty)} <a href="https://t.me/CercleDesAfricains" target="_blank" rel="noopener">Telegram</a></div>`}</div>` +
+    (past.length ? `<div class="list"><h2>${esc(L.past_title)}</h2>${past.map(e => card(e,true)).join("")}</div>` : "");
+  // Accueil : prochain événement
+  const se = document.getElementById("spot-event");
+  se.innerHTML = up.length
+    ? `<span class="k">${esc(L.spot_event)}</span><b>${esc(loc(up[0],"titre"))}</b><small>${new Intl.DateTimeFormat(LOCALE[lang],{day:"numeric",month:"long"}).format(up[0].dt)}${up[0].lieu ? " · " + esc(up[0].lieu) : ""}</small>`
+    : `<span class="k">${esc(L.spot_event)}</span><b>${esc(L.spot_noevent)}</b><small>${esc(L.spot_noevent_d)}</small>`;
+}
+function renderFetes(){
+  const L = T[lang], list = nextFetes(), fmt = new Intl.DateTimeFormat(LOCALE[lang], {day:"numeric", month:"long"});
+  const fmtMonth = new Intl.DateTimeFormat(LOCALE[lang], {month:"long"});
+  const sf = document.getElementById("spot-fete");
+  if (list.length) {
+    const f = list[0];
+    sf.innerHTML = `<span class="k">${esc(L.spot_fete)}</span><span class="flag">${flag(f.code)}</span><b>${esc(f[lang])}</b><small>${fmt.format(f.next)} · ${esc(anniv(f.age))}</small><span class="count">${esc(daysLabel(f.days))}</span>`;
+  } else sf.innerHTML = `<span class="k">${esc(L.spot_fete)}</span><b>—</b>`;
+  let html = `<p class="note">${esc(L.fetes_intro)}</p>`, lastM = "";
+  for (const f of list) {
+    const m = fmtMonth.format(f.next) + " " + f.next.getFullYear();
+    if (m !== lastM) { html += `<div class="month">${esc(m)}</div>`; lastM = m; }
+    html += `<div class="item fete${f.days === 0 ? " today" : ""}"><div class="flag">${flag(f.code)}<small>${String(f.d).padStart(2,"0")}.${String(f.m).padStart(2,"0")}</small></div>
+      <div><h3>${esc(f[lang])}</h3><p>${esc(L["type_" + f.type])} · ${esc(anniv(f.age))}</p>
+      <span class="pill ${f.days <= 7 ? "wip" : "past"}">${esc(daysLabel(f.days))}</span></div></div>`;
+  }
+  document.getElementById("pane-fetes").innerHTML = html;
+}
+function renderGallery(){
+  const L = T[lang], g = document.getElementById("gallery");
+  if (!DATA.photos.length) { g.innerHTML = `<div class="empty">${esc(L.gal_empty)}</div>`; return; }
+  g.innerHTML = `<div class="gallery">${DATA.photos.map((p,i) => `<button type="button" data-i="${i}"><img src="${esc(p.src)}" alt="${esc(p[lang]||p.fr)}" loading="lazy">${(p[lang]||p.fr) ? `<span>${esc(p[lang]||p.fr)}</span>` : ""}</button>`).join("")}</div>`;
+  g.querySelectorAll("button[data-i]").forEach(b => b.addEventListener("click", () => {
+    const p = DATA.photos[+b.dataset.i];
+    document.getElementById("lb-img").src = p.src;
+    document.getElementById("lb-img").alt = p[lang] || p.fr;
+    document.getElementById("lb-cap").textContent = p[lang] || p.fr;
+    document.getElementById("lightbox").classList.add("on");
+  }));
+}
 function applyLang(){
   const d = T[lang];
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = d[el.dataset.i18n] ?? ""; });
   document.querySelectorAll("[data-i18n-html]").forEach(el => { el.innerHTML = d[el.dataset.i18nHtml] ?? ""; });
   document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  renderEvents(); renderFetes(); renderGallery();
 }
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => {
   lang = b.dataset.lang; try { localStorage.setItem("cda_lang", lang); } catch(e) {} applyLang();
 }));
-const VIEWS = ["accueil","agenda","cercle","adherer","contact"];
+document.getElementById("lb-close").addEventListener("click", () => document.getElementById("lightbox").classList.remove("on"));
+document.getElementById("lightbox").addEventListener("click", e => { if (e.target.id === "lightbox") e.currentTarget.classList.remove("on"); });
+document.getElementById("copy-link").addEventListener("click", async () => {
+  const out = document.getElementById("copied");
+  try { await navigator.clipboard.writeText(APP_URL); out.textContent = T[lang].copied; }
+  catch(e) { out.textContent = T[lang].copy_fail + APP_URL; }
+});
+
+/* ---------- Navigation ---------- */
+const VIEWS = ["accueil","agenda","galerie","cercle","adherer"];
 function route(){
-  const h = (location.hash || "").replace("#","");
+  let h = (location.hash || "").replace("#","");
+  let pane = "agenda";
+  if (h === "fetes") { pane = "fetes"; h = "agenda"; }
+  const anchor = h === "contact" ? "contact" : null;
+  if (anchor) h = "cercle";
   const v = VIEWS.includes(h) ? h : "accueil";
   document.querySelectorAll("section.view").forEach(s => s.classList.toggle("on", s.dataset.view === v));
-  document.querySelectorAll("nav.tabs a").forEach(a => {
-    if (a.dataset.tab === v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
-  });
-  window.scrollTo(0,0);
+  document.querySelectorAll("nav.tabs a").forEach(a => { if (a.dataset.tab === v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  if (v === "agenda") {
+    document.getElementById("pane-events").hidden = pane !== "agenda";
+    document.getElementById("pane-fetes").hidden = pane !== "fetes";
+    document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.seg === pane));
+  }
+  if (anchor) document.getElementById(anchor).scrollIntoView(); else window.scrollTo(0,0);
 }
+document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.seg; }));
 window.addEventListener("hashchange", route);
+
 applyLang(); route();
+fetch("contenu.txt", {cache:"no-cache"}).then(r => r.ok ? r.text() : Promise.reject()).then(txt => { DATA = parseContent(txt); applyLang(); route(); }).catch(() => {});
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
 }
