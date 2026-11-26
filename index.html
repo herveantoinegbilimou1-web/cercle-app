@@ -482,7 +482,7 @@ try { const s = localStorage.getItem("cda_lang"); if (T[s]) lang = s; } catch(e)
 
 /* ---------- Lecture de contenu.txt ---------- */
 let DATA = {events:[], photos:[], fetes:[], albums:[], guide:[]};
-let ALBUM = null, LB = {list:[], i:0};
+let ALBUM = null, LB = {list:[], i:0}, LASTV = "";
 function norm(k){ return k.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").trim(); }
 function parseContent(txt){
   const out = {events:[], photos:[], fetes:[], albums:[], guide:[]};
@@ -693,7 +693,8 @@ function route(){
   document.querySelectorAll("section.view").forEach(s => s.classList.toggle("on", s.dataset.view === v));
   const tabV = v === "guide" ? "cercle" : v;
   document.querySelectorAll("nav.tabs a").forEach(a => { if (a.dataset.tab === tabV) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
-  if (v === "galerie" && h === "galerie" && !anchor) { /* garde l'album ouvert */ }
+  if (v === "galerie" && LASTV !== "galerie" && ALBUM !== null) { ALBUM = null; renderGallery(); }
+  LASTV = v;
   if (v === "agenda") {
     document.getElementById("pane-events").hidden = pane !== "agenda";
     document.getElementById("pane-fetes").hidden = pane !== "fetes";
