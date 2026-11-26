@@ -101,18 +101,22 @@ texte_en: More than 300 people celebrated the richness of the continent's cultur
 #
 #  Étape 1 : sur GitHub, ouvrez le dossier « galerie »,
 #            puis « Add file » > « Upload files » et déposez la photo.
-#  Étape 2 : ajoutez ici une ligne, sous [galerie], au format :
+#  Étape 2 : ajoutez une ligne sous l'album voulu, au format :
 #
 #  galerie/nom-de-la-photo.jpg | Légende FR | Подпись RU | Caption EN
 #
 #  On peut aussi mettre l'adresse complète d'une photo du site
-#  (https://cercledesafricains.org/uploads/...), comme ci-dessous.
-#  Les photos s'affichent dans l'ordre des lignes.
+#  (https://cercledesafricains.org/uploads/...).
 #  Conseil : photos de moins de 1 Mo (JPG), pour un chargement rapide.
+#
+#  ALBUMS : une ligne « album: Nom FR | Nom RU | Nom EN » ouvre
+#  un nouvel album ; les photos en dessous lui appartiennent.
+#  La première photo d'un album sert de couverture.
 ############################################################
 
 [galerie]
 
+album: Visite du 22 novembre 2026 | Визит 22 ноября 2026 г. | Visit, 22 November 2026
 galerie/visite-01.jpg | Visite du 22 novembre 2026 : photo de groupe | Визит 22 ноября 2026 г.: общее фото | Visit, 22 November 2026: group photo
 galerie/visite-02.jpg | Visite du 22 novembre 2026 : photo de groupe | Визит 22 ноября 2026 г.: общее фото | Visit, 22 November 2026: group photo
 galerie/visite-03.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г.: спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
@@ -123,7 +127,8 @@ galerie/visite-07.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Ви
 galerie/visite-08.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г.: спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
 galerie/visite-09.jpg | Visite du 22 novembre 2026 : au monument | Визит 22 ноября 2026 г.: у монумента | Visit, 22 November 2026: at the monument
 galerie/visite-10.jpg | Visite du 22 novembre 2026 : au monument | Визит 22 ноября 2026 г.: у монумента | Visit, 22 November 2026: at the monument
-galerie/perm-01.jpg | Mission à Perm, 31 octobre 2026 : photo de groupe | Поездка в Пермь, 31 октября 2026 г.: общее фото | Mission to Perm, 31 October 2026: group photo
+
+album: CAN EKB 2026 | CAN EKB 2026 | CAN EKB 2026
 galerie/can26-01.jpg | CAN EKB 2026 : la victoire | CAN EKB 2026: победа | CAN EKB 2026: victory
 galerie/can26-02.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026: награждение | CAN EKB 2026: award ceremony
 galerie/can26-03.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026: награждение | CAN EKB 2026: award ceremony
@@ -147,25 +152,34 @@ galerie/can26-20.jpg | CAN EKB 2026 : animation | CAN EKB 2026: ведущая |
 galerie/can26-21.jpg | CAN EKB 2026 : supporters | CAN EKB 2026: болельщики | CAN EKB 2026: supporters
 galerie/can26-22.jpg | CAN EKB 2026 : supporters | CAN EKB 2026: болельщики | CAN EKB 2026: supporters
 galerie/can26-23.jpg | CAN EKB 2026 : supporters | CAN EKB 2026: болельщики | CAN EKB 2026: supporters
+https://cercledesafricains.org/uploads/2026/11/6324a5f10f069445.jpg | CAN EKB 2026 : notre équipe | CAN EKB 2026: наша команда | CAN EKB 2026: our team
+https://cercledesafricains.org/uploads/2026/11/48e2e26d69b5310c.jpg | Victoire et trophée | Победа и кубок | Victory and trophy
+
+album: Mission à Perm | Поездка в Пермь | Mission to Perm
+galerie/perm-01.jpg | Mission à Perm, 31 octobre 2026 : photo de groupe | Поездка в Пермь, 31 октября 2026 г.: общее фото | Mission to Perm, 31 October 2026: group photo
+
+album: Réunions et conférences | Собрания и конференции | Meetings and conferences
 galerie/mai-01.jpg | Réunion du 8 mai 2026 : photo de groupe | Собрание 8 мая 2026 г.: общее фото | Meeting, 8 May 2026: group photo
 galerie/mai-02.jpg | Réunion du 8 mai 2026 : photo de groupe | Собрание 8 мая 2026 г.: общее фото | Meeting, 8 May 2026: group photo
 galerie/mai-03.jpg | Réunion du 8 mai 2026 : photo de groupe | Собрание 8 мая 2026 г.: общее фото | Meeting, 8 May 2026: group photo
 galerie/avril-01.jpg | Réunion du 5 avril 2026 : photo de groupe | Собрание 5 апреля 2026 г.: общее фото | Meeting, 5 April 2026: group photo
 galerie/avril-02.jpg | Réunion du 5 avril 2026 : photo de groupe | Собрание 5 апреля 2026 г.: общее фото | Meeting, 5 April 2026: group photo
+https://cercledesafricains.org/uploads/2026/11/cd5b9aa1006035bc.jpg | Conférence du 30 mai 2026 | Конференция 30 мая 2026 г. | Conference, 30 May 2026
+
+album: Culture et spectacles | Культура и выступления | Culture and shows
+https://cercledesafricains.org/uploads/2026/11/04789e0b4bee4a58.jpg | Spectacle sur scène aux couleurs de l'Afrique | Выступление на сцене в цветах Африки | On stage in the colours of Africa
+https://cercledesafricains.org/uploads/2026/11/6783d344c7d252be.jpg | Percussions africaines | Африканские барабаны | African drumming
+https://cercledesafricains.org/uploads/2026/11/ca085074cf9fb127.jpg | Tenues traditionnelles | Традиционные наряды | Traditional outfits
+https://cercledesafricains.org/uploads/2026/11/0637b24057e18aa6.jpg | Danse sur scène | Танец на сцене | Dance on stage
+https://cercledesafricains.org/uploads/2026/11/b691f77c66f3be04.jpg | « We love Africa » sur scène | «We love Africa» на сцене | "We love Africa" on stage
+https://cercledesafricains.org/uploads/2026/11/5f471e437fb0a4c2.jpg | La communauté réunie | Наше сообщество | Our community together
+https://cercledesafricains.org/uploads/2026/11/be8f713c640f2b0b.jpg | Journée Africaine 2025 | День Африки 2025 | African Day 2025
+
+album: Tournois sportifs | Спортивные турниры | Sports tournaments
 galerie/can25-01.jpg | CAN EKB 2025 : une équipe | CAN EKB 2025: команда | CAN EKB 2025: a team
 galerie/mars-01.jpg | Tournoi du 8 mars 2025 : une équipe | Турнир 8 марта 2025 г.: команда | Tournament, 8 March 2025: a team
 galerie/mars-02.jpg | Tournoi du 8 mars 2025 : une équipe | Турнир 8 марта 2025 г.: команда | Tournament, 8 March 2025: a team
-https://cercledesafricains.org/uploads/2026/11/04789e0b4bee4a58.jpg | Spectacle sur scène aux couleurs de l'Afrique | Выступление на сцене в цветах Африки | On stage in the colours of Africa
-https://cercledesafricains.org/uploads/2026/11/6324a5f10f069445.jpg | CAN EKB 2026 : notre équipe | CAN EKB 2026: наша команда | CAN EKB 2026: our team
-https://cercledesafricains.org/uploads/2026/11/48e2e26d69b5310c.jpg | Victoire et trophée | Победа и кубок | Victory and trophy
-https://cercledesafricains.org/uploads/2026/11/5f471e437fb0a4c2.jpg | La communauté réunie | Наше сообщество | Our community together
-https://cercledesafricains.org/uploads/2026/11/6783d344c7d252be.jpg | Percussions africaines | Африканские барабаны | African drumming
-https://cercledesafricains.org/uploads/2026/11/ca085074cf9fb127.jpg | Tenues traditionnelles | Традиционные наряды | Traditional outfits
 https://cercledesafricains.org/uploads/2026/11/f94b6ad4eef14ddd.jpg | Équipe féminine de football | Женская футбольная команда | Women's football team
-https://cercledesafricains.org/uploads/2026/11/0637b24057e18aa6.jpg | Danse sur scène | Танец на сцене | Dance on stage
-https://cercledesafricains.org/uploads/2026/11/b691f77c66f3be04.jpg | « We love Africa » sur scène | «We love Africa» на сцене | "We love Africa" on stage
-https://cercledesafricains.org/uploads/2026/11/cd5b9aa1006035bc.jpg | Conférence du 30 mai 2026 | Конференция 30 мая 2026 г. | Conference, 30 May 2026
-https://cercledesafricains.org/uploads/2026/11/be8f713c640f2b0b.jpg | Journée Africaine 2025 | День Африки 2025 | African Day 2025
 
 
 ############################################################
@@ -241,3 +255,44 @@ TN | 20/03 | 1956 | indépendance | Tunisie | Тунис | Tunisia
 UG | 09/10 | 1962 | indépendance | Ouganda | Уганда | Uganda
 ZM | 24/10 | 1964 | indépendance | Zambie | Замбия | Zambia
 ZW | 18/04 | 1980 | indépendance | Zimbabwe | Зимбабве | Zimbabwe
+
+
+############################################################
+#  4. GUIDE DES NOUVEAUX ARRIVANTS
+#
+#  « rubrique: » ouvre une rubrique, « point: » ajoute un conseil.
+#  Format : texte FR | texte RU | texte EN
+#
+#  IMPORTANT : règles vérifiées en novembre 2026 (sources :
+#  consultant.ru, garant.ru, mos.ru, universités). Elles changent
+#  souvent : relisez ce guide au moins deux fois par an.
+############################################################
+
+[guide]
+
+rubrique: Dans les 7 jours ouvrables : l'enregistrement migratoire | В течение 7 рабочих дней: миграционный учёт | Within 7 working days: migration registration
+point: Vous devez être enregistré à votre adresse (миграционный учёт). C'est l'université, le foyer ou le propriétaire du logement qui fait la démarche, pas vous seul : réclamez-la dès votre arrivée. | Вас обязаны поставить на миграционный учёт по месту пребывания. Это делает вуз, общежитие или собственник жилья: попросите об этом сразу по приезде. | You must be registered at your address (migration registration). The university, the dormitory or the landlord files it, not you alone: ask for it as soon as you arrive.
+point: Gardez toujours sur vous le talon d'enregistrement (отрывная часть уведомления) et votre carte migratoire. | Всегда носите с собой отрывную часть уведомления о прибытии и миграционную карту. | Always carry the registration slip (отрывная часть уведомления) and your migration card.
+point: Les citoyens des pays de l'Union eurasiatique ont parfois des délais différents : demandez au service international de votre université. | Для граждан стран ЕАЭС сроки могут отличаться: уточните в международной службе вуза. | Citizens of Eurasian Economic Union countries may have different deadlines: check with your university's international office.
+
+rubrique: Dans les 30 jours : examen médical et empreintes digitales | В течение 30 дней: медосвидетельствование и дактилоскопия | Within 30 days: medical check and fingerprints
+point: Depuis le 1er septembre 2026, tout étranger venu pour plus de 90 jours doit passer l'examen médical dans les 30 jours après son entrée en Russie. Ne tardez pas : les sanctions ont été renforcées en 2026. | С 1 сентября 2026 года все иностранцы, приехавшие более чем на 90 дней, проходят медосвидетельствование в течение 30 дней со дня въезда. Не откладывайте: ответственность ужесточена в 2026 году. | Since 1 September 2026, every foreigner staying more than 90 days must take the medical check within 30 days of entering Russia. Do not wait: penalties were tightened in 2026.
+point: Faites aussi la dactyloscopie (empreintes digitales et photo). Votre université vous indique les centres agréés et les documents à apporter. | Пройдите также дактилоскопию (отпечатки пальцев и фотографирование). Вуз подскажет аккредитованные центры и нужные документы. | Also do the fingerprinting (fingerprints and photo). Your university will tell you the approved centres and the documents to bring.
+
+rubrique: Le téléphone : la carte SIM | Телефон: сим-карта | Your phone: the SIM card
+point: Pour une carte SIM russe, il faut votre passeport, puis confirmer votre identité sur Gosuslugi et par la biométrie (ЕБС). La ligne ne fonctionne qu'après cette confirmation. | Для российской сим-карты нужен паспорт и подтверждение личности через Госуслуги и биометрию (ЕБС). Связь заработает только после подтверждения. | For a Russian SIM card you need your passport, then to confirm your identity on Gosuslugi and with biometrics (ЕБС). The line only works after this confirmation.
+point: Les grandes boutiques des opérateurs (MTS, Beeline, MegaFon, T2) ont des terminaux biométriques : allez-y avec votre passeport. | В крупных салонах операторов (МТС, Билайн, МегаФон, Т2) есть биометрические терминалы: приходите с паспортом. | Large operator shops (MTS, Beeline, MegaFon, T2) have biometric terminals: go there with your passport.
+
+rubrique: Santé | Здоровье | Health
+point: Une assurance santé (полис ДМС) est généralement exigée pour étudier en Russie. Gardez-la sur vous et notez la clinique où vous êtes rattaché. | Для учёбы в России, как правило, нужен полис ДМС. Носите его с собой и запомните, к какой клинике вы прикреплены. | Health insurance (полис ДМС) is usually required to study in Russia. Keep it with you and note which clinic you are assigned to.
+
+rubrique: Numéros d'urgence | Экстренные номера | Emergency numbers
+point: 112 : numéro unique d'urgence, depuis n'importe quel téléphone. | 112 — единый номер экстренных служб, с любого телефона. | 112: single emergency number, from any phone.
+point: 101 pompiers · 102 police · 103 ambulance. | 101 пожарные · 102 полиция · 103 скорая помощь. | 101 fire · 102 police · 103 ambulance.
+
+rubrique: La vie à Ekaterinbourg | Жизнь в Екатеринбурге | Life in Ekaterinburg
+point: Transports : métro, tramway et bus. Une carte de transport rechargeable est plus pratique que les tickets. | Транспорт: метро, трамвай и автобус. Транспортная карта удобнее разовых билетов. | Transport: metro, tram and bus. A rechargeable transport card is easier than single tickets.
+point: L'hiver est long et froid (souvent −20 °C) : prévoyez manteau chaud, bonnet, gants et chaussures antidérapantes dès novembre. | Зима долгая и холодная (часто −20 °C): с ноября нужны тёплая куртка, шапка, перчатки и нескользящая обувь. | Winter is long and cold (often −20 °C): from November you need a warm coat, hat, gloves and non-slip shoes.
+
+rubrique: Le Cercle est là pour vous | «Круг» рядом с вами | The Cercle is here for you
+point: Une question, une difficulté ? Écrivez-nous sur WhatsApp ou Telegram : un membre du Cercle vous répond et vous oriente. | Вопрос или трудность? Напишите нам в WhatsApp или Telegram: участник «Круга» ответит и подскажет. | A question or a problem? Write to us on WhatsApp or Telegram: a Cercle member will answer and guide you.
