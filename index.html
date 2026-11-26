@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 <style>
 :root{
   /* Charte du Cercle : fond sombre, or, bandes kente. App mobile à onglets en bas. */
@@ -67,6 +67,7 @@ p.lead{color:var(--muted);font-size:16px;max-width:62ch}
 .feature{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .spot{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--text);min-width:0}
 .spot .k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.spot .flag,.fete .flag{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif}
 .spot .flag{font-size:30px;line-height:1}
 .spot b{font-size:15px;line-height:1.25;overflow-wrap:anywhere}
 .spot small{color:var(--muted);font-size:13px;line-height:1.35}
@@ -505,7 +506,7 @@ function renderFetes(){
   for (const f of list) {
     const m = fmtMonth.format(f.next) + " " + f.next.getFullYear();
     if (m !== lastM) { html += `<div class="month">${esc(m)}</div>`; lastM = m; }
-    html += `<div class="item fete${f.days === 0 ? " today" : ""}"><div class="flag">${flag(f.code)}<small>${String(f.d).padStart(2,"0")}.${String(f.m).padStart(2,"0")}</small></div>
+    html += `<div class="item fete${f.days === 0 ? " today" : ""}"><div class="flag">${flag(f.code)}<small style="font-family:var(--body)">${String(f.d).padStart(2,"0")}.${String(f.m).padStart(2,"0")}</small></div>
       <div><h3>${esc(f[lang])}</h3><p>${esc(L["type_" + f.type])} · ${esc(anniv(f.age))}</p>
       <span class="pill ${f.days <= 7 ? "wip" : "past"}">${esc(daysLabel(f.days))}</span></div></div>`;
   }
