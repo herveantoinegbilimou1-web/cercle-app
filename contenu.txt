@@ -113,48 +113,48 @@ texte_en: More than 300 people celebrated the richness of the continent's cultur
 
 [galerie]
 
-galerie/visite-01.jpg | Visite du 22 novembre 2026 : photo de groupe | Визит 22 ноября 2026 г. : общее фото | Visit, 22 November 2026: group photo
-galerie/visite-02.jpg | Visite du 22 novembre 2026 : photo de groupe | Визит 22 ноября 2026 г. : общее фото | Visit, 22 November 2026: group photo
-galerie/visite-03.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г. : спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
-galerie/visite-04.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г. : спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
-galerie/visite-05.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г. : спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
-galerie/visite-06.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г. : спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
-galerie/visite-07.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г. : спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
-galerie/visite-08.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г. : спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
-galerie/visite-09.jpg | Visite du 22 novembre 2026 : au monument | Визит 22 ноября 2026 г. : у монумента | Visit, 22 November 2026: at the monument
-galerie/visite-10.jpg | Visite du 22 novembre 2026 : au monument | Визит 22 ноября 2026 г. : у монумента | Visit, 22 November 2026: at the monument
-galerie/perm-01.jpg | Mission à Perm, 31 octobre 2026 : photo de groupe | Поездка в Пермь, 31 октября 2026 г. : общее фото | Mission to Perm, 31 October 2026: group photo
-galerie/can26-01.jpg | CAN EKB 2026 : la victoire | CAN EKB 2026 : победа | CAN EKB 2026: victory
-galerie/can26-02.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026 : награждение | CAN EKB 2026: award ceremony
-galerie/can26-03.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026 : награждение | CAN EKB 2026: award ceremony
-galerie/can26-04.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026 : награждение | CAN EKB 2026: award ceremony
-galerie/can26-05.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026 : награждение | CAN EKB 2026: award ceremony
-galerie/can26-06.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026 : награждение | CAN EKB 2026: award ceremony
-galerie/can26-07.jpg | CAN EKB 2026 : match | CAN EKB 2026 : матч | CAN EKB 2026: match
-galerie/can26-08.jpg | CAN EKB 2026 : match féminin | CAN EKB 2026 : женский матч | CAN EKB 2026: women's match
-galerie/can26-09.jpg | CAN EKB 2026 : match féminin | CAN EKB 2026 : женский матч | CAN EKB 2026: women's match
-galerie/can26-10.jpg | CAN EKB 2026 : une équipe | CAN EKB 2026 : команда | CAN EKB 2026: a team
-galerie/can26-11.jpg | CAN EKB 2026 : une équipe | CAN EKB 2026 : команда | CAN EKB 2026: a team
-galerie/can26-12.jpg | CAN EKB 2026 : une équipe | CAN EKB 2026 : команда | CAN EKB 2026: a team
-galerie/can26-13.jpg | CAN EKB 2026 : match | CAN EKB 2026 : матч | CAN EKB 2026: match
-galerie/can26-14.jpg | CAN EKB 2026 : match | CAN EKB 2026 : матч | CAN EKB 2026: match
-galerie/can26-15.jpg | CAN EKB 2026 : match | CAN EKB 2026 : матч | CAN EKB 2026: match
-galerie/can26-16.jpg | CAN EKB 2026 : match | CAN EKB 2026 : матч | CAN EKB 2026: match
-galerie/can26-17.jpg | CAN EKB 2026 : match | CAN EKB 2026 : матч | CAN EKB 2026: match
-galerie/can26-18.jpg | CAN EKB 2026 : une équipe | CAN EKB 2026 : команда | CAN EKB 2026: a team
-galerie/can26-19.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026 : награждение | CAN EKB 2026: award ceremony
-galerie/can26-20.jpg | CAN EKB 2026 : animation | CAN EKB 2026 : ведущая | CAN EKB 2026: host
-galerie/can26-21.jpg | CAN EKB 2026 : supporters | CAN EKB 2026 : болельщики | CAN EKB 2026: supporters
-galerie/can26-22.jpg | CAN EKB 2026 : supporters | CAN EKB 2026 : болельщики | CAN EKB 2026: supporters
-galerie/can26-23.jpg | CAN EKB 2026 : supporters | CAN EKB 2026 : болельщики | CAN EKB 2026: supporters
-galerie/mai-01.jpg | Réunion du 8 mai 2026 : photo de groupe | Собрание 8 мая 2026 г. : общее фото | Meeting, 8 May 2026: group photo
-galerie/mai-02.jpg | Réunion du 8 mai 2026 : photo de groupe | Собрание 8 мая 2026 г. : общее фото | Meeting, 8 May 2026: group photo
-galerie/mai-03.jpg | Réunion du 8 mai 2026 : photo de groupe | Собрание 8 мая 2026 г. : общее фото | Meeting, 8 May 2026: group photo
-galerie/avril-01.jpg | Réunion du 5 avril 2026 : photo de groupe | Собрание 5 апреля 2026 г. : общее фото | Meeting, 5 April 2026: group photo
-galerie/avril-02.jpg | Réunion du 5 avril 2026 : photo de groupe | Собрание 5 апреля 2026 г. : общее фото | Meeting, 5 April 2026: group photo
-galerie/can25-01.jpg | CAN EKB 2025 : une équipe | CAN EKB 2025 : команда | CAN EKB 2025: a team
-galerie/mars-01.jpg | Tournoi du 8 mars 2025 : une équipe | Турнир 8 марта 2025 г. : команда | Tournament, 8 March 2025: a team
-galerie/mars-02.jpg | Tournoi du 8 mars 2025 : une équipe | Турнир 8 марта 2025 г. : команда | Tournament, 8 March 2025: a team
+galerie/visite-01.jpg | Visite du 22 novembre 2026 : photo de groupe | Визит 22 ноября 2026 г.: общее фото | Visit, 22 November 2026: group photo
+galerie/visite-02.jpg | Visite du 22 novembre 2026 : photo de groupe | Визит 22 ноября 2026 г.: общее фото | Visit, 22 November 2026: group photo
+galerie/visite-03.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г.: спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
+galerie/visite-04.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г.: спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
+galerie/visite-05.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г.: спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
+galerie/visite-06.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г.: спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
+galerie/visite-07.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г.: спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
+galerie/visite-08.jpg | Visite du 22 novembre 2026 : complexe sportif RCC | Визит 22 ноября 2026 г.: спорткомплекс RCC | Visit, 22 November 2026: RCC sports complex
+galerie/visite-09.jpg | Visite du 22 novembre 2026 : au monument | Визит 22 ноября 2026 г.: у монумента | Visit, 22 November 2026: at the monument
+galerie/visite-10.jpg | Visite du 22 novembre 2026 : au monument | Визит 22 ноября 2026 г.: у монумента | Visit, 22 November 2026: at the monument
+galerie/perm-01.jpg | Mission à Perm, 31 octobre 2026 : photo de groupe | Поездка в Пермь, 31 октября 2026 г.: общее фото | Mission to Perm, 31 October 2026: group photo
+galerie/can26-01.jpg | CAN EKB 2026 : la victoire | CAN EKB 2026: победа | CAN EKB 2026: victory
+galerie/can26-02.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026: награждение | CAN EKB 2026: award ceremony
+galerie/can26-03.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026: награждение | CAN EKB 2026: award ceremony
+galerie/can26-04.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026: награждение | CAN EKB 2026: award ceremony
+galerie/can26-05.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026: награждение | CAN EKB 2026: award ceremony
+galerie/can26-06.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026: награждение | CAN EKB 2026: award ceremony
+galerie/can26-07.jpg | CAN EKB 2026 : match | CAN EKB 2026: матч | CAN EKB 2026: match
+galerie/can26-08.jpg | CAN EKB 2026 : match féminin | CAN EKB 2026: женский матч | CAN EKB 2026: women's match
+galerie/can26-09.jpg | CAN EKB 2026 : match féminin | CAN EKB 2026: женский матч | CAN EKB 2026: women's match
+galerie/can26-10.jpg | CAN EKB 2026 : une équipe | CAN EKB 2026: команда | CAN EKB 2026: a team
+galerie/can26-11.jpg | CAN EKB 2026 : une équipe | CAN EKB 2026: команда | CAN EKB 2026: a team
+galerie/can26-12.jpg | CAN EKB 2026 : une équipe | CAN EKB 2026: команда | CAN EKB 2026: a team
+galerie/can26-13.jpg | CAN EKB 2026 : match | CAN EKB 2026: матч | CAN EKB 2026: match
+galerie/can26-14.jpg | CAN EKB 2026 : match | CAN EKB 2026: матч | CAN EKB 2026: match
+galerie/can26-15.jpg | CAN EKB 2026 : match | CAN EKB 2026: матч | CAN EKB 2026: match
+galerie/can26-16.jpg | CAN EKB 2026 : match | CAN EKB 2026: матч | CAN EKB 2026: match
+galerie/can26-17.jpg | CAN EKB 2026 : match | CAN EKB 2026: матч | CAN EKB 2026: match
+galerie/can26-18.jpg | CAN EKB 2026 : une équipe | CAN EKB 2026: команда | CAN EKB 2026: a team
+galerie/can26-19.jpg | CAN EKB 2026 : remise des prix | CAN EKB 2026: награждение | CAN EKB 2026: award ceremony
+galerie/can26-20.jpg | CAN EKB 2026 : animation | CAN EKB 2026: ведущая | CAN EKB 2026: host
+galerie/can26-21.jpg | CAN EKB 2026 : supporters | CAN EKB 2026: болельщики | CAN EKB 2026: supporters
+galerie/can26-22.jpg | CAN EKB 2026 : supporters | CAN EKB 2026: болельщики | CAN EKB 2026: supporters
+galerie/can26-23.jpg | CAN EKB 2026 : supporters | CAN EKB 2026: болельщики | CAN EKB 2026: supporters
+galerie/mai-01.jpg | Réunion du 8 mai 2026 : photo de groupe | Собрание 8 мая 2026 г.: общее фото | Meeting, 8 May 2026: group photo
+galerie/mai-02.jpg | Réunion du 8 mai 2026 : photo de groupe | Собрание 8 мая 2026 г.: общее фото | Meeting, 8 May 2026: group photo
+galerie/mai-03.jpg | Réunion du 8 mai 2026 : photo de groupe | Собрание 8 мая 2026 г.: общее фото | Meeting, 8 May 2026: group photo
+galerie/avril-01.jpg | Réunion du 5 avril 2026 : photo de groupe | Собрание 5 апреля 2026 г.: общее фото | Meeting, 5 April 2026: group photo
+galerie/avril-02.jpg | Réunion du 5 avril 2026 : photo de groupe | Собрание 5 апреля 2026 г.: общее фото | Meeting, 5 April 2026: group photo
+galerie/can25-01.jpg | CAN EKB 2025 : une équipe | CAN EKB 2025: команда | CAN EKB 2025: a team
+galerie/mars-01.jpg | Tournoi du 8 mars 2025 : une équipe | Турнир 8 марта 2025 г.: команда | Tournament, 8 March 2025: a team
+galerie/mars-02.jpg | Tournoi du 8 mars 2025 : une équipe | Турнир 8 марта 2025 г.: команда | Tournament, 8 March 2025: a team
 https://cercledesafricains.org/uploads/2026/11/04789e0b4bee4a58.jpg | Spectacle sur scène aux couleurs de l'Afrique | Выступление на сцене в цветах Африки | On stage in the colours of Africa
 https://cercledesafricains.org/uploads/2026/11/6324a5f10f069445.jpg | CAN EKB 2026 : notre équipe | CAN EKB 2026: наша команда | CAN EKB 2026: our team
 https://cercledesafricains.org/uploads/2026/11/48e2e26d69b5310c.jpg | Victoire et trophée | Победа и кубок | Victory and trophy
