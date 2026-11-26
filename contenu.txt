@@ -105,11 +105,25 @@ texte_en: More than 300 people celebrated the richness of the continent's cultur
 #
 #  galerie/nom-de-la-photo.jpg | Légende FR | Подпись RU | Caption EN
 #
+#  On peut aussi mettre l'adresse complète d'une photo du site
+#  (https://cercledesafricains.org/uploads/...), comme ci-dessous.
 #  Les photos s'affichent dans l'ordre des lignes.
 #  Conseil : photos de moins de 1 Mo (JPG), pour un chargement rapide.
 ############################################################
 
 [galerie]
+
+https://cercledesafricains.org/uploads/2026/11/04789e0b4bee4a58.jpg | Spectacle sur scène aux couleurs de l'Afrique | Выступление на сцене в цветах Африки | On stage in the colours of Africa
+https://cercledesafricains.org/uploads/2026/11/6324a5f10f069445.jpg | CAN EKB 2026 : notre équipe | CAN EKB 2026: наша команда | CAN EKB 2026: our team
+https://cercledesafricains.org/uploads/2026/11/48e2e26d69b5310c.jpg | Victoire et trophée | Победа и кубок | Victory and trophy
+https://cercledesafricains.org/uploads/2026/11/5f471e437fb0a4c2.jpg | La communauté réunie | Наше сообщество | Our community together
+https://cercledesafricains.org/uploads/2026/11/6783d344c7d252be.jpg | Percussions africaines | Африканские барабаны | African drumming
+https://cercledesafricains.org/uploads/2026/11/ca085074cf9fb127.jpg | Tenues traditionnelles | Традиционные наряды | Traditional outfits
+https://cercledesafricains.org/uploads/2026/11/f94b6ad4eef14ddd.jpg | Équipe féminine de football | Женская футбольная команда | Women's football team
+https://cercledesafricains.org/uploads/2026/11/0637b24057e18aa6.jpg | Danse sur scène | Танец на сцене | Dance on stage
+https://cercledesafricains.org/uploads/2026/11/b691f77c66f3be04.jpg | « We love Africa » sur scène | «We love Africa» на сцене | "We love Africa" on stage
+https://cercledesafricains.org/uploads/2026/11/cd5b9aa1006035bc.jpg | Conférence du 30 mai 2026 | Конференция 30 мая 2026 г. | Conference, 30 May 2026
+https://cercledesafricains.org/uploads/2026/11/be8f713c640f2b0b.jpg | Journée Africaine 2025 | День Африки 2025 | African Day 2025
 
 
 ############################################################
